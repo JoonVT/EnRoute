@@ -13,16 +13,16 @@
 
 ## Ik verlicht de stad met:
 Film:
-	Shaduwfilm: objecten gevonden in de stad worden gebruikt om schaduwen te maken met de flits van de iPhone
+- Shaduwfilm: objecten gevonden in de stad worden gebruikt om schaduwen te maken met de flits van de iPhone
 
 Locatie:
-	Oplichten: overzicht met de verschillende locaties in de stad waar opdrachten zijn uitgevoerd worden opgelicht
+- Oplichten: overzicht met de verschillende locaties in de stad waar opdrachten zijn uitgevoerd worden opgelicht
 
 Geluid:
-	Donker/Licht: Geluiden van donkere en lichte locaties worden opgenomen
+- Donker/Licht: Geluiden van donkere en lichte locaties worden opgenomen
 
 Muziek:
-	Licht muziek: via de lichtsensor wordt een muziek compositie gemaakt waar lichte geluiden hoge tonen zijn en donkere geluiden lage tonen.
+- Licht muziek: via de lichtsensor wordt een muziek compositie gemaakt waar lichte geluiden hoge tonen zijn en donkere geluiden lage tonen.
 
 Beeld:
-	Textuur: beelden van donkere en lichte texturen worden samengebracht
+- Textuur: beelden van donkere en lichte texturen worden samengebracht
