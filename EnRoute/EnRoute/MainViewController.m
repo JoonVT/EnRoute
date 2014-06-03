@@ -35,7 +35,20 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(brightnessDidChange:) name:UIScreenBrightnessDidChangeNotification object:nil];
+    
+    [UIScreen mainScreen].brightness = 0.5;
+}
+
+-(void) brightnessDidChange:(NSNotification*)notification
+{
+    float light = [UIScreen mainScreen].brightness;
+    int redPercentage = 255*light;
+    int greenPercentage = 255-redPercentage;
+    
+    NSLog(@"Brightness did change to %f", light*100);
+    
+    self.view.backgroundColor = [UIColor colorWithRed:(redPercentage/255.0) green:(greenPercentage/255.0) blue:(0) alpha:1];
 }
 
 - (void)didReceiveMemoryWarning

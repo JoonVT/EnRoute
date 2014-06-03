@@ -34,20 +34,20 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		01876B73193603650037D9DC /* EnRoute.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EnRoute.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		01876B73193603650037D9DC /* En Route.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "En Route.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		01876B76193603650037D9DC /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		01876B78193603650037D9DC /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
 		01876B7A193603650037D9DC /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
-		01876B7E193603650037D9DC /* EnRoute-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "EnRoute-Info.plist"; sourceTree = "<group>"; };
+		01876B7E193603650037D9DC /* En Route-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "En Route-Info.plist"; sourceTree = "<group>"; };
 		01876B80193603650037D9DC /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		01876B82193603650037D9DC /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		01876B84193603650037D9DC /* EnRoute-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "EnRoute-Prefix.pch"; sourceTree = "<group>"; };
+		01876B84193603650037D9DC /* En Route-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "En Route-Prefix.pch"; sourceTree = "<group>"; };
 		01876B85193603650037D9DC /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		01876B86193603650037D9DC /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		01876B88193603650037D9DC /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
-		01876B8E193603650037D9DC /* EnRouteTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = EnRouteTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		01876B8E193603650037D9DC /* En RouteTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "En RouteTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		01876B8F193603650037D9DC /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
-		01876B97193603650037D9DC /* EnRouteTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "EnRouteTests-Info.plist"; sourceTree = "<group>"; };
+		01876B97193603650037D9DC /* En RouteTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "En RouteTests-Info.plist"; sourceTree = "<group>"; };
 		01876B99193603650037D9DC /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		01876B9B193603650037D9DC /* EnRouteTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = EnRouteTests.m; sourceTree = "<group>"; };
 		01876BA51936038A0037D9DC /* MainView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainView.h; sourceTree = "<group>"; };
@@ -93,8 +93,8 @@
 		01876B74193603650037D9DC /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				01876B73193603650037D9DC /* EnRoute.app */,
-				01876B8E193603650037D9DC /* EnRouteTests.xctest */,
+				01876B73193603650037D9DC /* En Route.app */,
+				01876B8E193603650037D9DC /* En RouteTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -128,10 +128,10 @@
 		01876B7D193603650037D9DC /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				01876B7E193603650037D9DC /* EnRoute-Info.plist */,
+				01876B7E193603650037D9DC /* En Route-Info.plist */,
 				01876B7F193603650037D9DC /* InfoPlist.strings */,
 				01876B82193603650037D9DC /* main.m */,
-				01876B84193603650037D9DC /* EnRoute-Prefix.pch */,
+				01876B84193603650037D9DC /* En Route-Prefix.pch */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -148,7 +148,7 @@
 		01876B96193603650037D9DC /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				01876B97193603650037D9DC /* EnRouteTests-Info.plist */,
+				01876B97193603650037D9DC /* En RouteTests-Info.plist */,
 				01876B98193603650037D9DC /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
@@ -157,9 +157,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		01876B72193603650037D9DC /* EnRoute */ = {
+		01876B72193603650037D9DC /* En Route */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 01876B9F193603650037D9DC /* Build configuration list for PBXNativeTarget "EnRoute" */;
+			buildConfigurationList = 01876B9F193603650037D9DC /* Build configuration list for PBXNativeTarget "En Route" */;
 			buildPhases = (
 				01876B6F193603650037D9DC /* Sources */,
 				01876B70193603650037D9DC /* Frameworks */,
@@ -169,14 +169,14 @@
 			);
 			dependencies = (
 			);
-			name = EnRoute;
+			name = "En Route";
 			productName = EnRoute;
-			productReference = 01876B73193603650037D9DC /* EnRoute.app */;
+			productReference = 01876B73193603650037D9DC /* En Route.app */;
 			productType = "com.apple.product-type.application";
 		};
-		01876B8D193603650037D9DC /* EnRouteTests */ = {
+		01876B8D193603650037D9DC /* En RouteTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 01876BA2193603650037D9DC /* Build configuration list for PBXNativeTarget "EnRouteTests" */;
+			buildConfigurationList = 01876BA2193603650037D9DC /* Build configuration list for PBXNativeTarget "En RouteTests" */;
 			buildPhases = (
 				01876B8A193603650037D9DC /* Sources */,
 				01876B8B193603650037D9DC /* Frameworks */,
@@ -187,9 +187,9 @@
 			dependencies = (
 				01876B94193603650037D9DC /* PBXTargetDependency */,
 			);
-			name = EnRouteTests;
+			name = "En RouteTests";
 			productName = EnRouteTests;
-			productReference = 01876B8E193603650037D9DC /* EnRouteTests.xctest */;
+			productReference = 01876B8E193603650037D9DC /* En RouteTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
@@ -206,7 +206,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 01876B6E193603650037D9DC /* Build configuration list for PBXProject "EnRoute" */;
+			buildConfigurationList = 01876B6E193603650037D9DC /* Build configuration list for PBXProject "En Route" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -218,8 +218,8 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				01876B72193603650037D9DC /* EnRoute */,
-				01876B8D193603650037D9DC /* EnRouteTests */,
+				01876B72193603650037D9DC /* En Route */,
+				01876B8D193603650037D9DC /* En RouteTests */,
 			);
 		};
 /* End PBXProject section */
@@ -269,7 +269,7 @@
 /* Begin PBXTargetDependency section */
 		01876B94193603650037D9DC /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 01876B72193603650037D9DC /* EnRoute */;
+			target = 01876B72193603650037D9DC /* En Route */;
 			targetProxy = 01876B93193603650037D9DC /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -369,10 +369,18 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "EnRoute/EnRoute-Prefix.pch";
-				INFOPLIST_FILE = "EnRoute/EnRoute-Info.plist";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				GCC_PREFIX_HEADER = "EnRoute/En Route-Prefix.pch";
+				INFOPLIST_FILE = "EnRoute/En Route-Info.plist";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
+				PRODUCT_NAME = "En Route";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -382,10 +390,18 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "EnRoute/EnRoute-Prefix.pch";
-				INFOPLIST_FILE = "EnRoute/EnRoute-Info.plist";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				GCC_PREFIX_HEADER = "EnRoute/En Route-Prefix.pch";
+				INFOPLIST_FILE = "EnRoute/En Route-Info.plist";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
+				PRODUCT_NAME = "En Route";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
@@ -405,8 +421,8 @@
 					"DEBUG=1",
 					"$(inherited)",
 				);
-				INFOPLIST_FILE = "EnRouteTests/EnRouteTests-Info.plist";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				INFOPLIST_FILE = "EnRouteTests/En RouteTests-Info.plist";
+				PRODUCT_NAME = "En RouteTests";
 				TEST_HOST = "$(BUNDLE_LOADER)";
 				WRAPPER_EXTENSION = xctest;
 			};
@@ -423,8 +439,8 @@
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "EnRoute/EnRoute-Prefix.pch";
-				INFOPLIST_FILE = "EnRouteTests/EnRouteTests-Info.plist";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				INFOPLIST_FILE = "EnRouteTests/En RouteTests-Info.plist";
+				PRODUCT_NAME = "En RouteTests";
 				TEST_HOST = "$(BUNDLE_LOADER)";
 				WRAPPER_EXTENSION = xctest;
 			};
@@ -433,7 +449,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		01876B6E193603650037D9DC /* Build configuration list for PBXProject "EnRoute" */ = {
+		01876B6E193603650037D9DC /* Build configuration list for PBXProject "En Route" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				01876B9D193603650037D9DC /* Debug */,
@@ -442,21 +458,23 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		01876B9F193603650037D9DC /* Build configuration list for PBXNativeTarget "EnRoute" */ = {
+		01876B9F193603650037D9DC /* Build configuration list for PBXNativeTarget "En Route" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				01876BA0193603650037D9DC /* Debug */,
 				01876BA1193603650037D9DC /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
-		01876BA2193603650037D9DC /* Build configuration list for PBXNativeTarget "EnRouteTests" */ = {
+		01876BA2193603650037D9DC /* Build configuration list for PBXNativeTarget "En RouteTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				01876BA3193603650037D9DC /* Debug */,
 				01876BA4193603650037D9DC /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
