@@ -7,9 +7,12 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <AFNetworking.h>
 #import "LoginView.h"
 
-@interface LoginViewController : UIViewController
+@interface LoginViewController : UIViewController <UIPickerViewDataSource, UIPickerViewDelegate>
+
+@property (nonatomic, retain)  NSMutableArray *classData;
 
 @property (strong, nonatomic) LoginView *view;
 

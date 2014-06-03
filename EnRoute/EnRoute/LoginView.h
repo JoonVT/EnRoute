@@ -10,8 +10,7 @@
 
 @interface LoginView : UIView
 
-@property (strong, nonatomic) UITextField *txtUsername;
-@property (strong, nonatomic) UITextField *txtPassword;
+@property (strong, nonatomic) UIPickerView *classSelect;
 @property (strong, nonatomic) UIButton *btnLogin;
 
 -(void)showErrorMessage;
