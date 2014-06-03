@@ -35,9 +35,19 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(brightnessDidChange:) name:UIScreenBrightnessDidChangeNotification object:nil];
     
     [UIScreen mainScreen].brightness = 0.5;
+}
+
+- (void)viewDidAppear:(BOOL)animated
+{
+    if( [[NSUserDefaults standardUserDefaults] boolForKey:@"isLoggedIn"] == NO )
+    {
+        self.loginVC = [[LoginViewController alloc] initWithNibName:nil bundle:nil];
+        [self presentViewController:self.loginVC animated:NO completion:^{}];
+    }
 }
 
 -(void) brightnessDidChange:(NSNotification*)notification

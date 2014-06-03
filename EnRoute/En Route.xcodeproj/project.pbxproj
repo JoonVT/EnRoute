@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		01795422193DD4DC00DFFB4E /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 01795421193DD4DC00DFFB4E /* LoginViewController.m */; };
+		01795425193DD4F000DFFB4E /* LoginView.m in Sources */ = {isa = PBXBuildFile; fileRef = 01795424193DD4F000DFFB4E /* LoginView.m */; };
 		01876B77193603650037D9DC /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 01876B76193603650037D9DC /* Foundation.framework */; };
 		01876B79193603650037D9DC /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 01876B78193603650037D9DC /* CoreGraphics.framework */; };
 		01876B7B193603650037D9DC /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 01876B7A193603650037D9DC /* UIKit.framework */; };
@@ -21,6 +23,7 @@
 		01876B9C193603650037D9DC /* EnRouteTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 01876B9B193603650037D9DC /* EnRouteTests.m */; };
 		01876BA71936038A0037D9DC /* MainView.m in Sources */ = {isa = PBXBuildFile; fileRef = 01876BA61936038A0037D9DC /* MainView.m */; };
 		01876BAA193603C00037D9DC /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 01876BA9193603C00037D9DC /* MainViewController.m */; };
+		01EF09E7193DECF800ED862E /* AudioController.m in Sources */ = {isa = PBXBuildFile; fileRef = 01EF09E6193DECF800ED862E /* AudioController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -34,6 +37,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		01795420193DD4DC00DFFB4E /* LoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginViewController.h; sourceTree = "<group>"; };
+		01795421193DD4DC00DFFB4E /* LoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginViewController.m; sourceTree = "<group>"; };
+		01795423193DD4F000DFFB4E /* LoginView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginView.h; sourceTree = "<group>"; };
+		01795424193DD4F000DFFB4E /* LoginView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginView.m; sourceTree = "<group>"; };
 		01876B73193603650037D9DC /* En Route.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "En Route.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		01876B76193603650037D9DC /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		01876B78193603650037D9DC /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -54,6 +61,8 @@
 		01876BA61936038A0037D9DC /* MainView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainView.m; sourceTree = "<group>"; };
 		01876BA8193603C00037D9DC /* MainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainViewController.h; sourceTree = "<group>"; };
 		01876BA9193603C00037D9DC /* MainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainViewController.m; sourceTree = "<group>"; };
+		01EF09E5193DECF800ED862E /* AudioController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AudioController.h; path = ../AudioController.h; sourceTree = "<group>"; };
+		01EF09E6193DECF800ED862E /* AudioController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AudioController.m; path = ../AudioController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -121,6 +130,12 @@
 				01876BA9193603C00037D9DC /* MainViewController.m */,
 				01876BA51936038A0037D9DC /* MainView.h */,
 				01876BA61936038A0037D9DC /* MainView.m */,
+				01795420193DD4DC00DFFB4E /* LoginViewController.h */,
+				01795421193DD4DC00DFFB4E /* LoginViewController.m */,
+				01795423193DD4F000DFFB4E /* LoginView.h */,
+				01795424193DD4F000DFFB4E /* LoginView.m */,
+				01EF09E5193DECF800ED862E /* AudioController.h */,
+				01EF09E6193DECF800ED862E /* AudioController.m */,
 			);
 			path = EnRoute;
 			sourceTree = "<group>";
@@ -249,10 +264,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				01795425193DD4F000DFFB4E /* LoginView.m in Sources */,
 				01876B87193603650037D9DC /* AppDelegate.m in Sources */,
 				01876B83193603650037D9DC /* main.m in Sources */,
 				01876BA71936038A0037D9DC /* MainView.m in Sources */,
+				01EF09E7193DECF800ED862E /* AudioController.m in Sources */,
 				01876BAA193603C00037D9DC /* MainViewController.m in Sources */,
+				01795422193DD4DC00DFFB4E /* LoginViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
