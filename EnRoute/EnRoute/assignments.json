@@ -1,0 +1,16 @@
+[
+	{
+		"assignment": {
+			"id": "1",
+			"name": "Schaduwfilm",
+			"explanation": "Door het gebruik van meerdere toestellen in de groep wordt een schaduwfilm gemaakt met gevonden objecten uit de stad. Er is iemand die filmt en andere verlichten de objecten."
+		}
+	},
+	{
+		"assignment": {
+			"id": "2",
+			"name": "Lichtgeluid",
+			"explanation": "Door gebruikt te maken van de lichtsensor en flash worden verschillende tonen gemaakt door gebruik van licht. Licht en donker zorgen voor andere tonen."
+		}
+	}
+]

@@ -20,25 +20,43 @@
     if (self) {
         // Custom initialization
         
-        self.title = @"En Route";
+        NSString *path = [[NSBundle mainBundle] pathForResource:@"assignments" ofType:@"json"];
+        
+        NSData *jsonData = [NSData dataWithContentsOfFile:path];
+        NSError *error = nil;
+        
+        NSArray *loadedData = [NSJSONSerialization JSONObjectWithData:jsonData options:NSJSONReadingMutableContainers error:&error];
+        
+        if( !error ){
+            self.assignments = [NSMutableArray array];
+            
+            for(NSDictionary *dict in loadedData){
+                Assignment *assignment = [AssignmentFactory createAssignmentWithDictionary:[dict objectForKey:@"assignment"]];
+                [self.assignments addObject:assignment];
+            }
+            
+        }else {
+            UIAlertView *alertError = [[UIAlertView alloc] initWithTitle:@"Error" message:@"We couldn't load our awesome assignments!" delegate:self cancelButtonTitle:@"Ok 😢" otherButtonTitles:nil];
+            [alertError show];
+        }
     }
     return self;
 }
 
-- (void)loadView{
-    
+- (void)loadView
+{
     CGRect bounds = [[UIScreen mainScreen] bounds];
     
-    self.view = [[MainView alloc] initWithFrame:bounds];
+    self.view = [[MainView alloc] initWithFrame:bounds andAssignments:self.assignments];
+    
+    self.view.scrollView.delegate = self;
 }
 
 - (void)viewDidLoad
 {
     [super viewDidLoad];
     
-    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(brightnessDidChange:) name:UIScreenBrightnessDidChangeNotification object:nil];
-    
-    [UIScreen mainScreen].brightness = 0.5;
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(userDefaultsDidChange:) name:NSUserDefaultsDidChangeNotification object:nil];
 }
 
 - (void)viewDidAppear:(BOOL)animated
@@ -46,19 +64,36 @@
     if( [[NSUserDefaults standardUserDefaults] boolForKey:@"isLoggedIn"] == NO )
     {
         self.loginVC = [[LoginViewController alloc] initWithNibName:nil bundle:nil];
+        self.loginVC.modalTransitionStyle = UIModalTransitionStyleCrossDissolve;
         [self presentViewController:self.loginVC animated:NO completion:^{}];
+    }
+}
+
+-(void) userDefaultsDidChange:(NSNotification*)notification
+{
+    if( [[NSUserDefaults standardUserDefaults] boolForKey:@"isLoggedIn"] == YES )
+    {
+        [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(brightnessDidChange:) name:UIScreenBrightnessDidChangeNotification object:nil];
+        
+        [UIScreen mainScreen].brightness = 0.5;
     }
 }
 
 -(void) brightnessDidChange:(NSNotification*)notification
 {
     float light = [UIScreen mainScreen].brightness;
-    int redPercentage = 255*light;
-    int greenPercentage = 255-redPercentage;
+    int darkPercentage = 255*light;
+    int lightPercentage = 255-darkPercentage;
     
     NSLog(@"Brightness did change to %f", light*100);
     
-    self.view.backgroundColor = [UIColor colorWithRed:(redPercentage/255.0) green:(greenPercentage/255.0) blue:(0) alpha:1];
+    self.view.backgroundColor = [UIColor colorWithRed:(darkPercentage/255.0) green:(darkPercentage/255.0) blue:(darkPercentage/255.0) alpha:1];
+}
+
+- (void)scrollViewDidEndDecelerating:(UIScrollView *)scrollView
+{
+    int page = scrollView.contentOffset.x / scrollView.frame.size.width;
+    self.view.pageControl.currentPage = page;
 }
 
 - (void)didReceiveMemoryWarning

@@ -11,11 +11,14 @@
 #import <AudioToolbox/AudioToolbox.h>
 #import "LoginViewController.h"
 #import "MainView.h"
-#import "AudioController.h"
+#import "Assignment.h"
+#import "AssignmentFactory.h"
 
-@interface MainViewController : UIViewController
+@interface MainViewController : UIViewController <UIScrollViewDelegate>
 
 @property (strong, nonatomic) LoginViewController *loginVC;
 @property (strong, nonatomic) MainView *view;
+
+@property (nonatomic,strong) NSMutableArray *assignments;
 
 @end

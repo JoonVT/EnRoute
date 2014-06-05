@@ -1,8 +1,8 @@
 //
 //  AppDelegate.m
-//  EnRoute
+//  GyroTest
 //
-//  Created by Joon Van Thuyne on 28/05/14.
+//  Created by Joon Van Thuyne on 04/06/14.
 //  Copyright (c) 2014 JoonVT. All rights reserved.
 //
 

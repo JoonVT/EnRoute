@@ -19,15 +19,41 @@
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
         // Custom initialization
+        
+        
     }
     return self;
 }
 
-- (void)loadView{
-    
+- (void)loadView
+{
     CGRect bounds = [[UIScreen mainScreen] bounds];
     
     self.view = [[LoginView alloc] initWithFrame:bounds];
+}
+
+- (void)viewDidAppear:(BOOL)animated
+{
+    CGRect bounds = [[UIScreen mainScreen] bounds];
+    
+    [UIView animateWithDuration:2 delay:.5 usingSpringWithDamping:.75 initialSpringVelocity:.75 options:UIViewAnimationOptionCurveEaseOut animations:^{
+        self.view.backImage.center = CGPointMake(bounds.size.width/2, 0);
+    } completion:^(BOOL finished)
+    {
+        [UIView animateWithDuration:.75 delay:0 usingSpringWithDamping:.5 initialSpringVelocity:.5 options:UIViewAnimationOptionCurveEaseOut animations:^{
+            self.view.welcome.center = CGPointMake(bounds.size.width/2, bounds.origin.y+55);
+        } completion:^(BOOL finished)
+        {
+            [UIView animateWithDuration:.75 delay:.2 options:UIViewAnimationOptionCurveEaseOut animations:^{
+                self.view.lblTitle.alpha = 1;
+                self.view.lblSubTitle.alpha = 1;
+                self.view.classSelect.alpha = 1;
+                self.view.btnStart.alpha = 1;
+                self.view.loading.alpha = .75;
+                [self.view.loading startAnimating];
+            } completion:^(BOOL finished){}];
+        }];
+    }];
 }
 
 - (void)viewDidLoad
@@ -35,64 +61,74 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     
-    [self.view.btnLogin addTarget:self action:@selector(loginButtonTapped:) forControlEvents:UIControlEventTouchUpInside];
-    
+    [self loadClasses];
+}
+
+- (void)loadClasses
+{
     self.classData = [[NSMutableArray alloc] initWithObjects:nil];
+    
+    NSAttributedString *txtStart = [[NSAttributedString alloc] initWithString:@"START" attributes:@{NSFontAttributeName : [UIFont fontWithName:@"Hallosans-Black" size:22], NSForegroundColorAttributeName : [UIColor colorWithRed:0.76 green:0.62 blue:0.18 alpha:1], NSKernAttributeName : @(1.0f)}];
+    
+    NSAttributedString *txtReload = [[NSAttributedString alloc] initWithString:@"HERLAAD" attributes:@{NSFontAttributeName : [UIFont fontWithName:@"Hallosans-Black" size:22], NSForegroundColorAttributeName : [UIColor colorWithRed:0.76 green:0.62 blue:0.18 alpha:1], NSKernAttributeName : @(1.0f)}];
     
     AFHTTPRequestOperationManager *manager = [AFHTTPRequestOperationManager manager];
     [manager GET:@"http://student.howest.be/niels.boey/20132014/MAIV/ENROUTE/api/classgroups" parameters:nil success:^(AFHTTPRequestOperation *operation, id responseObject) {
         
-        for (NSDictionary* value in responseObject) {
+        for (NSDictionary* value in responseObject)
+        {
             NSString *class = value[@"classname"];
             [self.classData addObject:class];
         }
         
         self.view.classSelect.delegate = self;
+        [self.view.loading removeFromSuperview];
         [self.view addSubview:self.view.classSelect];
+        [self.view.btnStart setAttributedTitle:txtStart forState:UIControlStateNormal];
+        [self.view.btnStart addTarget:self action:@selector(startButtonTapped:) forControlEvents:UIControlEventTouchUpInside];
         
     } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
-        UIAlertView *alertError = [[UIAlertView alloc] initWithTitle:@"Oei, oei" message:@"We kunnen je klas nu niet ophalen. Sorry!" delegate:self cancelButtonTitle:@"Voor 1 keer is het goed" otherButtonTitles:nil];
+        UIAlertView *alertError = [[UIAlertView alloc] initWithTitle:@"Oei, oei" message:@"Ik werk jammer genoeg niet zonder internet… Zoek je vlug een netwerk?" delegate:self cancelButtonTitle:@"Ok, niet erg" otherButtonTitles:nil];
+        [self.view.btnStart setAttributedTitle:txtReload forState:UIControlStateNormal];
+        [self.view.btnStart addTarget:self action:@selector(reloadButtonTapped:) forControlEvents:UIControlEventTouchUpInside];
         [alertError show];
     }];
 }
 
-- (void)loginButtonTapped:(id)sender
+- (void)startButtonTapped:(id)sender
 {
-    /*
-    if([self.view.txtUsername.text isEqualToString:@"JoonVT"] && [self.view.txtPassword.text isEqualToString:@"azerty"])
-    {
-        [[NSUserDefaults standardUserDefaults] setBool:YES forKey:@"isLoggedIn"];
-        [self dismissViewControllerAnimated:YES completion:^{}];
-    }
-    else
-    {
-        [[NSUserDefaults standardUserDefaults] setBool:NO forKey:@"isLoggedIn"];
-        [self.view showErrorMessage];
-    }
-    */
+    [[NSUserDefaults standardUserDefaults] setBool:YES forKey:@"isLoggedIn"];
+    [self dismissViewControllerAnimated:YES completion:^{}];
     
     [[NSUserDefaults standardUserDefaults] synchronize];
+}
+
+- (void)reloadButtonTapped:(id)sender
+{
+    [self loadClasses];
 }
 
 - (UIView *)pickerView:(UIPickerView *)pickerView viewForRow:(NSInteger)row forComponent:(NSInteger)component reusingView:(UIView *)view{
     
     NSString *listText = self.classData[row];
     
-    UILabel *label = [[UILabel alloc] initWithFrame:CGRectMake(0, 0, pickerView.frame.size.width, 44)];
-    label.textColor = [UIColor whiteColor];
-    label.textAlignment = NSTextAlignmentCenter;
-    label.font = [UIFont fontWithName:@"Avenir-Light" size:25];
+    NSAttributedString *txtLabel = [[NSAttributedString alloc] initWithString:listText attributes:@{NSFontAttributeName : [UIFont fontWithName:@"Hallosans-Black" size:18], NSForegroundColorAttributeName : [UIColor colorWithRed:0.51 green:0.51 blue:0.51 alpha:1], NSKernAttributeName : @(1.0f)}];
     
-    label.text = listText;
+    UILabel *label = [[UILabel alloc] initWithFrame:CGRectMake(0, 0, pickerView.frame.size.width, 44)];
+    label.attributedText = txtLabel;
+    label.textAlignment = NSTextAlignmentCenter;
+    
     return label;
 }
 
 
-- (NSInteger)numberOfComponentsInPickerView:(UIPickerView *)pickerView; {
+- (NSInteger)numberOfComponentsInPickerView:(UIPickerView *)pickerView
+{
     return 1;
 }
 
-- (NSInteger)pickerView:(UIPickerView *)pickerView numberOfRowsInComponent:(NSInteger)component; {
+- (NSInteger)pickerView:(UIPickerView *)pickerView numberOfRowsInComponent:(NSInteger)component
+{
     return self.classData.count;
 }
 
@@ -101,7 +137,7 @@
     return [self.classData objectAtIndex:row];
 }
 
-- (void)pickerView:(UIPickerView *)pickerView didSelectRow:(NSInteger)row inComponent:(NSInteger)component;
+- (void)pickerView:(UIPickerView *)pickerView didSelectRow:(NSInteger)row inComponent:(NSInteger)component
 {
     //Write the required logic here that should happen after you select a row in Picker View.
 }

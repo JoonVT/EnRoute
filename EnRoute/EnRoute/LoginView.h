@@ -10,9 +10,12 @@
 
 @interface LoginView : UIView
 
+@property (strong, nonatomic) UIImageView *backImage;
+@property (strong, nonatomic) UIImageView *welcome;
+@property (strong, nonatomic) UILabel *lblTitle;
+@property (strong, nonatomic) UILabel *lblSubTitle;
+@property (strong, nonatomic) UIActivityIndicatorView *loading;
 @property (strong, nonatomic) UIPickerView *classSelect;
-@property (strong, nonatomic) UIButton *btnLogin;
-
--(void)showErrorMessage;
+@property (strong, nonatomic) UIButton *btnStart;
 
 @end

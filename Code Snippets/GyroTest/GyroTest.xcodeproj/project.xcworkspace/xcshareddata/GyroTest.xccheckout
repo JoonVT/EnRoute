@@ -5,20 +5,20 @@
 	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
 	<false/>
 	<key>IDESourceControlProjectIdentifier</key>
-	<string>E389F9C6-F474-4585-AC85-D60B71012406</string>
+	<string>9601D217-292D-4676-A580-931657C0292D</string>
 	<key>IDESourceControlProjectName</key>
-	<string>En Route</string>
+	<string>GyroTest</string>
 	<key>IDESourceControlProjectOriginsDictionary</key>
 	<dict>
 		<key>07A74943-F4A2-4E10-97E8-D970843CC428</key>
 		<string>https://github.com/JoonVT/EnRoute.git</string>
 	</dict>
 	<key>IDESourceControlProjectPath</key>
-	<string>EnRoute/En Route.xcworkspace</string>
+	<string>Code Snippets/GyroTest/GyroTest.xcodeproj/project.xcworkspace</string>
 	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
 	<dict>
 		<key>07A74943-F4A2-4E10-97E8-D970843CC428</key>
-		<string>../..</string>
+		<string>../../../..</string>
 	</dict>
 	<key>IDESourceControlProjectURL</key>
 	<string>https://github.com/JoonVT/EnRoute.git</string>

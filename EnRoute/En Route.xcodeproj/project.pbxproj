@@ -23,6 +23,13 @@
 		01876B9C193603650037D9DC /* EnRouteTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 01876B9B193603650037D9DC /* EnRouteTests.m */; };
 		01876BA71936038A0037D9DC /* MainView.m in Sources */ = {isa = PBXBuildFile; fileRef = 01876BA61936038A0037D9DC /* MainView.m */; };
 		01876BAA193603C00037D9DC /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 01876BA9193603C00037D9DC /* MainViewController.m */; };
+		018D7A3E194088B200099315 /* assignments.json in Resources */ = {isa = PBXBuildFile; fileRef = 018D7A3D194088B200099315 /* assignments.json */; };
+		018D7A411940895500099315 /* Assignment.m in Sources */ = {isa = PBXBuildFile; fileRef = 018D7A401940895500099315 /* Assignment.m */; };
+		018D7A441940897300099315 /* AssignmentFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = 018D7A431940897300099315 /* AssignmentFactory.m */; };
+		018D7A471940AC7100099315 /* AssignmentView.m in Sources */ = {isa = PBXBuildFile; fileRef = 018D7A461940AC7100099315 /* AssignmentView.m */; };
+		01AE872A193F644800637ECD /* Hallo sans.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 01AE8727193F644800637ECD /* Hallo sans.ttf */; };
+		01AE872B193F644800637ECD /* Hallo sans black.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 01AE8728193F644800637ECD /* Hallo sans black.ttf */; };
+		01AE872C193F644800637ECD /* Hallo sans light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 01AE8729193F644800637ECD /* Hallo sans light.ttf */; };
 		2D0ED2C6DB6845AC9034B192 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 92C5C1A96AE24848913ACBFA /* libPods.a */; };
 /* End PBXBuildFile section */
 
@@ -61,6 +68,16 @@
 		01876BA61936038A0037D9DC /* MainView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainView.m; sourceTree = "<group>"; };
 		01876BA8193603C00037D9DC /* MainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainViewController.h; sourceTree = "<group>"; };
 		01876BA9193603C00037D9DC /* MainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainViewController.m; sourceTree = "<group>"; };
+		018D7A3D194088B200099315 /* assignments.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = assignments.json; sourceTree = "<group>"; };
+		018D7A3F1940895500099315 /* Assignment.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Assignment.h; sourceTree = "<group>"; };
+		018D7A401940895500099315 /* Assignment.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Assignment.m; sourceTree = "<group>"; };
+		018D7A421940897300099315 /* AssignmentFactory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AssignmentFactory.h; sourceTree = "<group>"; };
+		018D7A431940897300099315 /* AssignmentFactory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AssignmentFactory.m; sourceTree = "<group>"; };
+		018D7A451940AC7100099315 /* AssignmentView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AssignmentView.h; sourceTree = "<group>"; };
+		018D7A461940AC7100099315 /* AssignmentView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AssignmentView.m; sourceTree = "<group>"; };
+		01AE8727193F644800637ECD /* Hallo sans.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Hallo sans.ttf"; sourceTree = "<group>"; };
+		01AE8728193F644800637ECD /* Hallo sans black.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Hallo sans black.ttf"; sourceTree = "<group>"; };
+		01AE8729193F644800637ECD /* Hallo sans light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Hallo sans light.ttf"; sourceTree = "<group>"; };
 		8373DD90F352408F9213D690 /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = "<group>"; };
 		92C5C1A96AE24848913ACBFA /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -133,10 +150,13 @@
 				01876BA9193603C00037D9DC /* MainViewController.m */,
 				01876BA51936038A0037D9DC /* MainView.h */,
 				01876BA61936038A0037D9DC /* MainView.m */,
-				01795420193DD4DC00DFFB4E /* LoginViewController.h */,
-				01795421193DD4DC00DFFB4E /* LoginViewController.m */,
-				01795423193DD4F000DFFB4E /* LoginView.h */,
-				01795424193DD4F000DFFB4E /* LoginView.m */,
+				018D7A451940AC7100099315 /* AssignmentView.h */,
+				018D7A461940AC7100099315 /* AssignmentView.m */,
+				018D7A421940897300099315 /* AssignmentFactory.h */,
+				018D7A431940897300099315 /* AssignmentFactory.m */,
+				018D7A3F1940895500099315 /* Assignment.h */,
+				018D7A401940895500099315 /* Assignment.m */,
+				01CE898A193F0D3B0040DE04 /* Login */,
 			);
 			path = EnRoute;
 			sourceTree = "<group>";
@@ -144,6 +164,10 @@
 		01876B7D193603650037D9DC /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				01AE8727193F644800637ECD /* Hallo sans.ttf */,
+				01AE8729193F644800637ECD /* Hallo sans light.ttf */,
+				01AE8728193F644800637ECD /* Hallo sans black.ttf */,
+				018D7A3D194088B200099315 /* assignments.json */,
 				01876B7E193603650037D9DC /* En Route-Info.plist */,
 				01876B7F193603650037D9DC /* InfoPlist.strings */,
 				01876B82193603650037D9DC /* main.m */,
@@ -168,6 +192,17 @@
 				01876B98193603650037D9DC /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		01CE898A193F0D3B0040DE04 /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				01795420193DD4DC00DFFB4E /* LoginViewController.h */,
+				01795421193DD4DC00DFFB4E /* LoginViewController.m */,
+				01795423193DD4F000DFFB4E /* LoginView.h */,
+				01795424193DD4F000DFFB4E /* LoginView.m */,
+			);
+			name = Login;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -247,8 +282,12 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				01AE872C193F644800637ECD /* Hallo sans light.ttf in Resources */,
+				01AE872B193F644800637ECD /* Hallo sans black.ttf in Resources */,
+				018D7A3E194088B200099315 /* assignments.json in Resources */,
 				01876B81193603650037D9DC /* InfoPlist.strings in Resources */,
 				01876B89193603650037D9DC /* Images.xcassets in Resources */,
+				01AE872A193F644800637ECD /* Hallo sans.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -300,12 +339,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				018D7A471940AC7100099315 /* AssignmentView.m in Sources */,
 				01795425193DD4F000DFFB4E /* LoginView.m in Sources */,
 				01876B87193603650037D9DC /* AppDelegate.m in Sources */,
 				01876B83193603650037D9DC /* main.m in Sources */,
 				01876BA71936038A0037D9DC /* MainView.m in Sources */,
+				018D7A411940895500099315 /* Assignment.m in Sources */,
 				01876BAA193603C00037D9DC /* MainViewController.m in Sources */,
 				01795422193DD4DC00DFFB4E /* LoginViewController.m in Sources */,
+				018D7A441940897300099315 /* AssignmentFactory.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
