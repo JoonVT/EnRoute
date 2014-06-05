@@ -25,7 +25,7 @@ Sluit je ogen en teken op je toestel naargelang het geluid dat je hoort, hiermee
 [ik zie, ik zie - 1 toestel - camera]
 Je krijgt telkens een random kleur, hier moet je een object in de stad voor zoeken en dit fotograferen. 
 
-[literatuur - 1 toestel - input(keyboard/word writing)]
+[boektitels - 1 toestel - input(keyboard/word writing)]
 Je krijgt een bepaalde structuur van een zin waar enkele woorden niet te zien zijn, deze moet je opvullen met woorden uit de stad
 
 [wijze [-] - 1 toestel - kompas]
