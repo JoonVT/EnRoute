@@ -17,7 +17,9 @@
     assignment.identifier = [[dictionary objectForKey:@"id"] intValue];
     assignment.name = [dictionary objectForKey:@"name"];
     assignment.explanation = [dictionary objectForKey:@"explanation"];
-    assignment.imgpath = [NSString stringWithFormat:@"%@.png", [dictionary objectForKey:@"id"]];
+    assignment.topColor = [dictionary objectForKey:@"color_top"];
+    assignment.bottomColor = [dictionary objectForKey:@"color_bottom"];
+    assignment.streetID = [[dictionary objectForKey:@"street_id"] intValue];
     
     return assignment;
 }

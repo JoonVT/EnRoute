@@ -20,6 +20,9 @@
     if (self) {
         // Custom initialization
         
+        self.automaticallyAdjustsScrollViewInsets = NO;
+        self.title = @"Super, klaar om Gent te verlichten?";
+        
         NSString *path = [[NSBundle mainBundle] pathForResource:@"assignments" ofType:@"json"];
         
         NSData *jsonData = [NSData dataWithContentsOfFile:path];
@@ -27,7 +30,8 @@
         
         NSArray *loadedData = [NSJSONSerialization JSONObjectWithData:jsonData options:NSJSONReadingMutableContainers error:&error];
         
-        if( !error ){
+        if( !error )
+        {
             self.assignments = [NSMutableArray array];
             
             for(NSDictionary *dict in loadedData){
@@ -35,7 +39,9 @@
                 [self.assignments addObject:assignment];
             }
             
-        }else {
+        }
+        else
+        {
             UIAlertView *alertError = [[UIAlertView alloc] initWithTitle:@"Error" message:@"We couldn't load our awesome assignments!" delegate:self cancelButtonTitle:@"Ok 😢" otherButtonTitles:nil];
             [alertError show];
         }
@@ -45,6 +51,13 @@
 
 - (void)loadView
 {
+    if( [[NSUserDefaults standardUserDefaults] boolForKey:@"isLoggedIn"] == NO )
+    {
+        self.loginVC = [[LoginViewController alloc] initWithNibName:nil bundle:nil];
+        self.loginVC.modalTransitionStyle = UIModalTransitionStyleCrossDissolve;
+        [self presentViewController:self.loginVC animated:NO completion:^{}];
+    }
+    
     CGRect bounds = [[UIScreen mainScreen] bounds];
     
     self.view = [[MainView alloc] initWithFrame:bounds andAssignments:self.assignments];
@@ -59,41 +72,48 @@
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(userDefaultsDidChange:) name:NSUserDefaultsDidChangeNotification object:nil];
 }
 
-- (void)viewDidAppear:(BOOL)animated
+-(void) userDefaultsDidChange:(NSNotification*)notification
 {
     if( [[NSUserDefaults standardUserDefaults] boolForKey:@"isLoggedIn"] == NO )
     {
         self.loginVC = [[LoginViewController alloc] initWithNibName:nil bundle:nil];
         self.loginVC.modalTransitionStyle = UIModalTransitionStyleCrossDissolve;
-        [self presentViewController:self.loginVC animated:NO completion:^{}];
+        [self presentViewController:self.loginVC animated:YES completion:^{}];
     }
-}
-
--(void) userDefaultsDidChange:(NSNotification*)notification
-{
-    if( [[NSUserDefaults standardUserDefaults] boolForKey:@"isLoggedIn"] == YES )
-    {
-        [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(brightnessDidChange:) name:UIScreenBrightnessDidChangeNotification object:nil];
-        
-        [UIScreen mainScreen].brightness = 0.5;
-    }
+    
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(brightnessDidChange:) name:UIScreenBrightnessDidChangeNotification object:nil];
+    
+    float light = [UIScreen mainScreen].brightness;
+    
+    [UIScreen mainScreen].brightness = light - 0.01;
 }
 
 -(void) brightnessDidChange:(NSNotification*)notification
 {
     float light = [UIScreen mainScreen].brightness;
-    int darkPercentage = 255*light;
-    int lightPercentage = 255-darkPercentage;
+    self.darkPercentage = 255*light;
     
     NSLog(@"Brightness did change to %f", light*100);
+}
+
+- (void)scrollViewDidEndScrollingAnimation:(UIScrollView *)scrollView
+{
+    int page = scrollView.contentOffset.x / scrollView.frame.size.width;
+    self.view.pageControl.currentPage = page;
     
-    self.view.backgroundColor = [UIColor colorWithRed:(darkPercentage/255.0) green:(darkPercentage/255.0) blue:(darkPercentage/255.0) alpha:1];
+    Assignment *currentAssignment = [self.assignments objectAtIndex:page];
+    
+    self.title = currentAssignment.name;
 }
 
 - (void)scrollViewDidEndDecelerating:(UIScrollView *)scrollView
 {
     int page = scrollView.contentOffset.x / scrollView.frame.size.width;
     self.view.pageControl.currentPage = page;
+    
+    Assignment *currentAssignment = [self.assignments objectAtIndex:page];
+    
+    self.title = currentAssignment.name;
 }
 
 - (void)didReceiveMemoryWarning

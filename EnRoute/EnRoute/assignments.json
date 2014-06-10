@@ -1,16 +1,82 @@
 [
-	{
+    {
+        "assignment": {
+            "id": "0",
+            "name": "Super, klaar om Gent te verlichten?",
+            "explanation": "Lorem ipsum and shit …",
+            "color_top": {
+                "red": "0",
+                "green": "0",
+                "blue": "0",
+                "alpha": "0"
+            },
+            "color_bottom": {
+                "red": "0",
+                "green": "0",
+                "blue": "0",
+                "alpha": "0"
+            },
+            "street_id": 0
+        }
+    },
+    {
 		"assignment": {
 			"id": "1",
 			"name": "Schaduwfilm",
-			"explanation": "Door het gebruik van meerdere toestellen in de groep wordt een schaduwfilm gemaakt met gevonden objecten uit de stad. Er is iemand die filmt en andere verlichten de objecten."
+            "explanation": "Door het gebruik van meerdere toestellen in de groep wordt een schaduwfilm gemaakt met gevonden objecten uit de stad. Er is iemand die filmt en andere verlichten de objecten.",
+            "color_top": {
+                "red": "0.99",
+                "green": "0.81",
+                "blue": "0.38",
+                "alpha": "1"
+            },
+            "color_bottom": {
+                "red": "0.99",
+                "green": "0.76",
+                "blue": "0.21",
+                "alpha": "1"
+            },
+            "street_id": 1
 		}
 	},
 	{
 		"assignment": {
 			"id": "2",
 			"name": "Lichtgeluid",
-			"explanation": "Door gebruikt te maken van de lichtsensor en flash worden verschillende tonen gemaakt door gebruik van licht. Licht en donker zorgen voor andere tonen."
+            "explanation": "Door gebruikt te maken van de lichtsensor en flash worden verschillende tonen gemaakt door gebruik van licht. Licht en donker zorgen voor andere tonen.",
+            "color_top": {
+                "red": "0.33",
+                "green": "0.79",
+                "blue": "0.63",
+                "alpha": "1"
+            },
+            "color_bottom": {
+                "red": "0.05",
+                "green": "0.31",
+                "blue": "0.25",
+                "alpha": "1"
+            },
+            "street_id": 2
 		}
-	}
+	},
+    {
+        "assignment": {
+            "id": "9999",
+            "name": "Het (licht)plan",
+            "explanation": "",
+            "color_top": {
+                "red": "0",
+                "green": "0",
+                "blue": "0",
+                "alpha": "0"
+            },
+            "color_bottom": {
+                "red": "0",
+                "green": "0",
+                "blue": "0",
+                "alpha": "0"
+            },
+            "street_id": 0
+        }
+    }
 ]

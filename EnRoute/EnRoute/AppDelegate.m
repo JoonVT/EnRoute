@@ -16,7 +16,14 @@
     // Override point for customization after application launch.
     
     MainViewController *mainTVC = [[MainViewController alloc] init];
-    self.window.rootViewController = mainTVC;
+    UINavigationController *navController = [[UINavigationController alloc] initWithRootViewController:mainTVC];
+    self.window.rootViewController = navController;
+    
+    navController.navigationBar.tintColor = [UIColor colorWithRed:0.51 green:0.51 blue:0.51 alpha:1];
+    navController.navigationBar.translucent = YES;
+    navController.navigationBar.titleTextAttributes = [NSDictionary dictionaryWithObjectsAndKeys:[UIColor colorWithRed:0.51 green:0.51 blue:0.51 alpha:1],NSForegroundColorAttributeName,[UIFont fontWithName:@"Hallosans-black" size:20.0],NSFontAttributeName,nil];
+    
+    [UIApplication sharedApplication].statusBarStyle = UIStatusBarStyleLightContent;
     
     self.window.backgroundColor = [UIColor whiteColor];
     [self.window makeKeyAndVisible];

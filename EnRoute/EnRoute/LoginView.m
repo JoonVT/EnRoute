@@ -18,7 +18,7 @@
         
         self.backImage = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"login"]];
         
-        NSAttributedString *txtTitle = [[NSAttributedString alloc] initWithString:@"EN ROUTE" attributes:@{NSFontAttributeName : [UIFont fontWithName:@"Hallosans-Black" size:30], NSForegroundColorAttributeName : [UIColor colorWithRed:0.58 green:0.86 blue:0.8 alpha:1], NSKernAttributeName : @(1.0f)}];
+        NSAttributedString *txtTitle = [[NSAttributedString alloc] initWithString:@"GENT VERLICHT" attributes:@{NSFontAttributeName : [UIFont fontWithName:@"Hallosans-Black" size:30], NSForegroundColorAttributeName : [UIColor colorWithRed:0.58 green:0.86 blue:0.8 alpha:1], NSKernAttributeName : @(1.0f)}];
         
         NSAttributedString *txtSubTitle = [[NSAttributedString alloc] initWithString:@"Kies je groep" attributes:@{NSFontAttributeName : [UIFont fontWithName:@"Hallosans" size:20], NSForegroundColorAttributeName : [UIColor colorWithRed:0.51 green:0.51 blue:0.51 alpha:1], NSKernAttributeName : @(1.0f)}];
         
@@ -49,7 +49,6 @@
         self.btnStart = [UIButton buttonWithType:UIButtonTypeSystem];
         self.btnStart.frame = CGRectMake(100, self.classSelect.frame.origin.y + self.classSelect.frame.size.height + 5, frame.size.width - 200, 45);
         self.btnStart.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"button"]];
-        self.btnStart.tintColor = [UIColor whiteColor];
         self.btnStart.alpha = 0;
         
         self.welcome = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"welcome"]];

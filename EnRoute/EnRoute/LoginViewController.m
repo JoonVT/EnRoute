@@ -41,7 +41,7 @@
     } completion:^(BOOL finished)
     {
         [UIView animateWithDuration:.75 delay:0 usingSpringWithDamping:.5 initialSpringVelocity:.5 options:UIViewAnimationOptionCurveEaseOut animations:^{
-            self.view.welcome.center = CGPointMake(bounds.size.width/2, bounds.origin.y+55);
+            self.view.welcome.center = CGPointMake(bounds.size.width/2, bounds.origin.y+60);
         } completion:^(BOOL finished)
         {
             [UIView animateWithDuration:.75 delay:.2 options:UIViewAnimationOptionCurveEaseOut animations:^{
@@ -72,23 +72,38 @@
     
     NSAttributedString *txtReload = [[NSAttributedString alloc] initWithString:@"HERLAAD" attributes:@{NSFontAttributeName : [UIFont fontWithName:@"Hallosans-Black" size:22], NSForegroundColorAttributeName : [UIColor colorWithRed:0.76 green:0.62 blue:0.18 alpha:1], NSKernAttributeName : @(1.0f)}];
     
+    NSDate *today = [NSDate date];
+    NSDateFormatter *dateFormat = [[NSDateFormatter alloc] init];
+    [dateFormat setDateFormat:@"yyyy-MM-dd"];
+    NSString *dateString = [dateFormat stringFromDate:today];
+    
     AFHTTPRequestOperationManager *manager = [AFHTTPRequestOperationManager manager];
-    [manager GET:@"http://student.howest.be/niels.boey/20132014/MAIV/ENROUTE/api/classgroups" parameters:nil success:^(AFHTTPRequestOperation *operation, id responseObject) {
+    NSString *url = [NSString stringWithFormat:@"http://student.howest.be/niels.boey/20132014/MAIV/ENROUTE/api/groups/%@", dateString];
+    [manager GET:url parameters:nil success:^(AFHTTPRequestOperation *operation, id responseObject) {
         
         for (NSDictionary* value in responseObject)
         {
-            NSString *class = value[@"classname"];
-            [self.classData addObject:class];
+            [self.classData addObject:value];
         }
         
-        self.view.classSelect.delegate = self;
-        [self.view.loading removeFromSuperview];
-        [self.view addSubview:self.view.classSelect];
-        [self.view.btnStart setAttributedTitle:txtStart forState:UIControlStateNormal];
-        [self.view.btnStart addTarget:self action:@selector(startButtonTapped:) forControlEvents:UIControlEventTouchUpInside];
+        if (self.classData.count == 0)
+        {
+            UIAlertView *emptyError = [[UIAlertView alloc] initWithTitle:@"Oei, oei" message:@"Zijn er wel al klassen toegevoegd?\nWacht nog even tot je begeleider ze heeft toegevoegd …" delegate:self cancelButtonTitle:@"Ok, ik wacht wel" otherButtonTitles:nil];
+            [self.view.btnStart setAttributedTitle:txtReload forState:UIControlStateNormal];
+            [self.view.btnStart addTarget:self action:@selector(reloadButtonTapped:) forControlEvents:UIControlEventTouchUpInside];
+            [emptyError show];
+        }
+        else
+        {
+            self.view.classSelect.delegate = self;
+            [self.view.loading removeFromSuperview];
+            [self.view addSubview:self.view.classSelect];
+            [self.view.btnStart setAttributedTitle:txtStart forState:UIControlStateNormal];
+            [self.view.btnStart addTarget:self action:@selector(startButtonTapped:) forControlEvents:UIControlEventTouchUpInside];
+        }
         
     } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
-        UIAlertView *alertError = [[UIAlertView alloc] initWithTitle:@"Oei, oei" message:@"Ik werk jammer genoeg niet zonder internet… Zoek je vlug een netwerk?" delegate:self cancelButtonTitle:@"Ok, niet erg" otherButtonTitles:nil];
+        UIAlertView *alertError = [[UIAlertView alloc] initWithTitle:@"Oei, oei" message:@"Er is iets foutgelopen…\nheb je wel internet?" delegate:self cancelButtonTitle:@"Ok, niet erg" otherButtonTitles:nil];
         [self.view.btnStart setAttributedTitle:txtReload forState:UIControlStateNormal];
         [self.view.btnStart addTarget:self action:@selector(reloadButtonTapped:) forControlEvents:UIControlEventTouchUpInside];
         [alertError show];
@@ -97,10 +112,16 @@
 
 - (void)startButtonTapped:(id)sender
 {
+    NSUInteger selectedRow = [self.view.classSelect selectedRowInComponent:0];
+    NSDictionary *selectedGroup = [self.classData objectAtIndex:selectedRow];
+    
     [[NSUserDefaults standardUserDefaults] setBool:YES forKey:@"isLoggedIn"];
+    [[NSUserDefaults standardUserDefaults] setObject:selectedGroup forKey:@"group"];
     [self dismissViewControllerAnimated:YES completion:^{}];
     
     [[NSUserDefaults standardUserDefaults] synchronize];
+    
+    NSLog(@"%@",[[NSUserDefaults standardUserDefaults] objectForKey:@"group"]);
 }
 
 - (void)reloadButtonTapped:(id)sender
@@ -110,7 +131,8 @@
 
 - (UIView *)pickerView:(UIPickerView *)pickerView viewForRow:(NSInteger)row forComponent:(NSInteger)component reusingView:(UIView *)view{
     
-    NSString *listText = self.classData[row];
+    NSDictionary *listItem = self.classData[row];
+    NSString *listText = [listItem objectForKey:@"groupname"];
     
     NSAttributedString *txtLabel = [[NSAttributedString alloc] initWithString:listText attributes:@{NSFontAttributeName : [UIFont fontWithName:@"Hallosans-Black" size:18], NSForegroundColorAttributeName : [UIColor colorWithRed:0.51 green:0.51 blue:0.51 alpha:1], NSKernAttributeName : @(1.0f)}];
     
@@ -139,7 +161,7 @@
 
 - (void)pickerView:(UIPickerView *)pickerView didSelectRow:(NSInteger)row inComponent:(NSInteger)component
 {
-    //Write the required logic here that should happen after you select a row in Picker View.
+    
 }
 
 - (void)didReceiveMemoryWarning

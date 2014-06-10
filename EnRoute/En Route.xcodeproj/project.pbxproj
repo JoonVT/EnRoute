@@ -27,6 +27,9 @@
 		018D7A411940895500099315 /* Assignment.m in Sources */ = {isa = PBXBuildFile; fileRef = 018D7A401940895500099315 /* Assignment.m */; };
 		018D7A441940897300099315 /* AssignmentFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = 018D7A431940897300099315 /* AssignmentFactory.m */; };
 		018D7A471940AC7100099315 /* AssignmentView.m in Sources */ = {isa = PBXBuildFile; fileRef = 018D7A461940AC7100099315 /* AssignmentView.m */; };
+		019B0DC61947543A00E3C450 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 019B0DC51947543A00E3C450 /* QuartzCore.framework */; };
+		019B0DCB19476C9A00E3C450 /* AssignmentToolsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 019B0DCA19476C9A00E3C450 /* AssignmentToolsViewController.m */; };
+		019B0DCE19476CAF00E3C450 /* AssignmentToolsView.m in Sources */ = {isa = PBXBuildFile; fileRef = 019B0DCD19476CAF00E3C450 /* AssignmentToolsView.m */; };
 		01AE872A193F644800637ECD /* Hallo sans.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 01AE8727193F644800637ECD /* Hallo sans.ttf */; };
 		01AE872B193F644800637ECD /* Hallo sans black.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 01AE8728193F644800637ECD /* Hallo sans black.ttf */; };
 		01AE872C193F644800637ECD /* Hallo sans light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 01AE8729193F644800637ECD /* Hallo sans light.ttf */; };
@@ -48,7 +51,7 @@
 		01795421193DD4DC00DFFB4E /* LoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginViewController.m; sourceTree = "<group>"; };
 		01795423193DD4F000DFFB4E /* LoginView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginView.h; sourceTree = "<group>"; };
 		01795424193DD4F000DFFB4E /* LoginView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginView.m; sourceTree = "<group>"; };
-		01876B73193603650037D9DC /* En Route.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "En Route.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		01876B73193603650037D9DC /* Gent Verlicht.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Gent Verlicht.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		01876B76193603650037D9DC /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		01876B78193603650037D9DC /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
 		01876B7A193603650037D9DC /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
@@ -75,6 +78,11 @@
 		018D7A431940897300099315 /* AssignmentFactory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AssignmentFactory.m; sourceTree = "<group>"; };
 		018D7A451940AC7100099315 /* AssignmentView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AssignmentView.h; sourceTree = "<group>"; };
 		018D7A461940AC7100099315 /* AssignmentView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AssignmentView.m; sourceTree = "<group>"; };
+		019B0DC51947543A00E3C450 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		019B0DC919476C9A00E3C450 /* AssignmentToolsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AssignmentToolsViewController.h; sourceTree = "<group>"; };
+		019B0DCA19476C9A00E3C450 /* AssignmentToolsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AssignmentToolsViewController.m; sourceTree = "<group>"; };
+		019B0DCC19476CAF00E3C450 /* AssignmentToolsView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AssignmentToolsView.h; sourceTree = "<group>"; };
+		019B0DCD19476CAF00E3C450 /* AssignmentToolsView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AssignmentToolsView.m; sourceTree = "<group>"; };
 		01AE8727193F644800637ECD /* Hallo sans.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Hallo sans.ttf"; sourceTree = "<group>"; };
 		01AE8728193F644800637ECD /* Hallo sans black.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Hallo sans black.ttf"; sourceTree = "<group>"; };
 		01AE8729193F644800637ECD /* Hallo sans light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Hallo sans light.ttf"; sourceTree = "<group>"; };
@@ -87,6 +95,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				019B0DC61947543A00E3C450 /* QuartzCore.framework in Frameworks */,
 				01876B79193603650037D9DC /* CoreGraphics.framework in Frameworks */,
 				01876B7B193603650037D9DC /* UIKit.framework in Frameworks */,
 				01876B77193603650037D9DC /* Foundation.framework in Frameworks */,
@@ -121,7 +130,7 @@
 		01876B74193603650037D9DC /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				01876B73193603650037D9DC /* En Route.app */,
+				01876B73193603650037D9DC /* Gent Verlicht.app */,
 				01876B8E193603650037D9DC /* En RouteTests.xctest */,
 			);
 			name = Products;
@@ -130,6 +139,7 @@
 		01876B75193603650037D9DC /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				019B0DC51947543A00E3C450 /* QuartzCore.framework */,
 				01876B76193603650037D9DC /* Foundation.framework */,
 				01876B78193603650037D9DC /* CoreGraphics.framework */,
 				01876B7A193603650037D9DC /* UIKit.framework */,
@@ -156,6 +166,7 @@
 				018D7A431940897300099315 /* AssignmentFactory.m */,
 				018D7A3F1940895500099315 /* Assignment.h */,
 				018D7A401940895500099315 /* Assignment.m */,
+				019B0DCF19476CBD00E3C450 /* AssignmentTools */,
 				01CE898A193F0D3B0040DE04 /* Login */,
 			);
 			path = EnRoute;
@@ -194,6 +205,17 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		019B0DCF19476CBD00E3C450 /* AssignmentTools */ = {
+			isa = PBXGroup;
+			children = (
+				019B0DC919476C9A00E3C450 /* AssignmentToolsViewController.h */,
+				019B0DCA19476C9A00E3C450 /* AssignmentToolsViewController.m */,
+				019B0DCC19476CAF00E3C450 /* AssignmentToolsView.h */,
+				019B0DCD19476CAF00E3C450 /* AssignmentToolsView.m */,
+			);
+			name = AssignmentTools;
+			sourceTree = "<group>";
+		};
 		01CE898A193F0D3B0040DE04 /* Login */ = {
 			isa = PBXGroup;
 			children = (
@@ -224,7 +246,7 @@
 			);
 			name = "En Route";
 			productName = EnRoute;
-			productReference = 01876B73193603650037D9DC /* En Route.app */;
+			productReference = 01876B73193603650037D9DC /* Gent Verlicht.app */;
 			productType = "com.apple.product-type.application";
 		};
 		01876B8D193603650037D9DC /* En RouteTests */ = {
@@ -339,9 +361,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				019B0DCE19476CAF00E3C450 /* AssignmentToolsView.m in Sources */,
 				018D7A471940AC7100099315 /* AssignmentView.m in Sources */,
 				01795425193DD4F000DFFB4E /* LoginView.m in Sources */,
 				01876B87193603650037D9DC /* AppDelegate.m in Sources */,
+				019B0DCB19476C9A00E3C450 /* AssignmentToolsViewController.m in Sources */,
 				01876B83193603650037D9DC /* main.m in Sources */,
 				01876BA71936038A0037D9DC /* MainView.m in Sources */,
 				018D7A411940895500099315 /* Assignment.m in Sources */,
@@ -476,7 +500,7 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)",
 				);
-				PRODUCT_NAME = "En Route";
+				PRODUCT_NAME = "Gent Verlicht";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -498,7 +522,7 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)",
 				);
-				PRODUCT_NAME = "En Route";
+				PRODUCT_NAME = "Gent Verlicht";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;

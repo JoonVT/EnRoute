@@ -13,6 +13,8 @@
 @property (nonatomic) int identifier;
 @property (nonatomic,strong) NSString *name;
 @property (nonatomic,strong) NSString *explanation;
-@property (nonatomic,strong) NSString *imgpath;
+@property (nonatomic,strong) NSDictionary *topColor;
+@property (nonatomic,strong) NSDictionary *bottomColor;
+@property (nonatomic) int streetID;
 
 @end

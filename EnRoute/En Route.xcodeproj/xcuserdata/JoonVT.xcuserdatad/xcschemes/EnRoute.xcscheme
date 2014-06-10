@@ -15,7 +15,7 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "01876B72193603650037D9DC"
-               BuildableName = "En Route.app"
+               BuildableName = "Gent Verlicht.app"
                BlueprintName = "En Route"
                ReferencedContainer = "container:En Route.xcodeproj">
             </BuildableReference>
@@ -43,7 +43,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "01876B72193603650037D9DC"
-            BuildableName = "En Route.app"
+            BuildableName = "Gent Verlicht.app"
             BlueprintName = "En Route"
             ReferencedContainer = "container:En Route.xcodeproj">
          </BuildableReference>
@@ -62,7 +62,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "01876B72193603650037D9DC"
-            BuildableName = "En Route.app"
+            BuildableName = "Gent Verlicht.app"
             BlueprintName = "En Route"
             ReferencedContainer = "container:En Route.xcodeproj">
          </BuildableReference>
@@ -80,7 +80,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "01876B72193603650037D9DC"
-            BuildableName = "En Route.app"
+            BuildableName = "Gent Verlicht.app"
             BlueprintName = "En Route"
             ReferencedContainer = "container:En Route.xcodeproj">
          </BuildableReference>

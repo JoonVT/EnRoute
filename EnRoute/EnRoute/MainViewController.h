@@ -13,6 +13,7 @@
 #import "MainView.h"
 #import "Assignment.h"
 #import "AssignmentFactory.h"
+#import "AssignmentToolsViewController.h"
 
 @interface MainViewController : UIViewController <UIScrollViewDelegate>
 
@@ -20,5 +21,7 @@
 @property (strong, nonatomic) MainView *view;
 
 @property (nonatomic,strong) NSMutableArray *assignments;
+
+@property (nonatomic) int darkPercentage;
 
 @end

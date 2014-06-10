@@ -7,9 +7,25 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <QuartzCore/QuartzCore.h>
+#import <RMMapView.h>
+#import <RMMapboxSource.h>
+#import <RMPointAnnotation.h>
+#import "Assignment.h"
 
 @interface AssignmentView : UIView
 
-@property (strong, nonatomic) UIButton *btnTest1;
+@property (strong, nonatomic) Assignment *assignment;
+
+@property (strong, nonatomic) UILabel *lblExplanation;
+
+@property (strong, nonatomic) UIButton *btnPrevious;
+@property (strong, nonatomic) UIButton *btnNext;
+
+@property (strong, nonatomic) RMMapView *mapView;
+
+@property (strong, nonatomic) UIMotionEffectGroup *motion;
+
+- (id)initWithFrame:(CGRect)frame andAssignment:(Assignment *)assignment;
 
 @end
