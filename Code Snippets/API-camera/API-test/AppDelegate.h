@@ -8,10 +8,12 @@
 
 #import <UIKit/UIKit.h>
 #import "UploadViewController.h"
+#import "OverviewViewController.h"
 
 @interface AppDelegate : UIResponder <UIApplicationDelegate>
 
 @property (strong, nonatomic) UIWindow *window;
 @property (nonatomic,strong) UploadViewController *uploadVC;
+@property (nonatomic,strong) OverviewViewController *overviewVC;
 
 @end

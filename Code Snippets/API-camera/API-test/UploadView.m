@@ -15,6 +15,8 @@
     self = [super initWithFrame:frame];
     if (self) {
         // Initialization code
+        
+        self.backgroundColor = [UIColor whiteColor];
 
         
    /*     self.field = [[UITextField alloc] initWithFrame:CGRectMake(25, 100, self.frame.size.width - 50, 30)];

@@ -17,8 +17,9 @@
     self.window.backgroundColor = [UIColor whiteColor];
     [self.window makeKeyAndVisible];
     
-    self.uploadVC = [[UploadViewController alloc] initWithNibName:nil bundle:nil];
-    UINavigationController *nav = [[UINavigationController alloc] initWithRootViewController:self.uploadVC];
+    self.overviewVC = [[OverviewViewController alloc] initWithNibName:nil bundle:nil];
+    // self.uploadVC = [[UploadViewController alloc] initWithNibName:nil bundle:nil];
+    UINavigationController *nav = [[UINavigationController alloc] initWithRootViewController:self.overviewVC];
     self.window.rootViewController = nav;
     
     return YES;

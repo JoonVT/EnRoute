@@ -19,8 +19,6 @@
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
         self.title = @"Camera";
-        
-        self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemSave target:self action:@selector(upload:)];
     }
     return self;
 }
@@ -161,35 +159,14 @@
             self.mediaURL = [NSURL fileURLWithPath:filePath];
         }
         
+        self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemSave target:self action:@selector(upload:)];
+        
     }];
 }
 
 -(void)upload:(id)sender {
-    NSLog(@"Upload tapped");
-
-    NSString *onlineURL = @"http://student.howest.be/niels.boey/20132014/MAIV/ENROUTE/api/files";
-    
-    AFHTTPRequestOperationManager *manager = [AFHTTPRequestOperationManager manager];
-#warning update parameters met GroupID, ClassID en MediaID
-    NSDictionary *parameters = @{@"groupid": @"1", @"classid": @"1", @"mediaid": @"1"};
-    manager.responseSerializer.acceptableContentTypes = [NSSet setWithObject:@"text/html"];
-
-    [manager POST:onlineURL parameters:parameters constructingBodyWithBlock:^(id<AFMultipartFormData> formData) {
-        [formData appendPartWithFileURL:self.mediaURL name:@"file" error:nil];
-    } success:^(AFHTTPRequestOperation *operation, id responseObject) {
-        NSLog(@"Success: %@", responseObject);
-        UIAlertView *alertSuccess = [[UIAlertView alloc] initWithTitle:@"Super" message:@"Je foto/video is geupload." delegate:self cancelButtonTitle:@"Joepie!" otherButtonTitles:nil];
-        [alertSuccess show];
-#warning toon aan dat gegevens geupload zijn (remove alert)
-#warning bij return true = Upload gelukt / false = mislukt
-    } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
-        NSLog(@"Error: %@", [error debugDescription]);
-        NSLog(@"Error: %@", [error localizedDescription]);
-        UIAlertView *alertSuccess = [[UIAlertView alloc] initWithTitle:@"Oei" message:@"Je foto/video kon niet geupload worden op de moment." delegate:self cancelButtonTitle:@"Oh nee" otherButtonTitles:nil];
-        [alertSuccess show];
-#warning toon aan dat gegevens NIET geupload zijn (remove alert)
-    }];
-
+    NSDictionary *userInfo = [NSDictionary dictionaryWithObject:self.mediaURL forKey:@"mediaurl"];
+    [[NSNotificationCenter defaultCenter] postNotificationName:@"uploadfile" object:nil userInfo:userInfo];
 }
 
 - (void)didReceiveMemoryWarning

@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>2C743C5A-FEBB-4DB7-A771-6BCAACF841C7</string>
+	<key>IDESourceControlProjectName</key>
+	<string>API-test</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>F79C79ED-1344-4070-AAD8-C74E57E339E3</key>
+		<string>https://github.com/JoonVT/EnRoute.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>Code Snippets/API-camera/API-test.xcworkspace</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>F79C79ED-1344-4070-AAD8-C74E57E339E3</key>
+		<string>../../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>https://github.com/JoonVT/EnRoute.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>110</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>F79C79ED-1344-4070-AAD8-C74E57E339E3</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>F79C79ED-1344-4070-AAD8-C74E57E339E3</string>
+			<key>IDESourceControlWCCName</key>
+			<string>EnRoute</string>
+		</dict>
+	</array>
+</dict>
+</plist>

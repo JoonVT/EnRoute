@@ -10,6 +10,8 @@
 		01002039193DC24C0063C430 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 01002038193DC24C0063C430 /* CoreLocation.framework */; };
 		01917CFE1941F92700FF8BD8 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 01917CFD1941F92700FF8BD8 /* AVFoundation.framework */; };
 		01917D001942025A00FF8BD8 /* MediaPlayer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 01917CFF1942025A00FF8BD8 /* MediaPlayer.framework */; };
+		01B004701947459B0009EBE2 /* OverviewViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 01B0046F1947459B0009EBE2 /* OverviewViewController.m */; };
+		01B00473194745AA0009EBE2 /* OverviewView.m in Sources */ = {isa = PBXBuildFile; fileRef = 01B00472194745AA0009EBE2 /* OverviewView.m */; };
 		01E0A59E193C9921006FC673 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 01E0A59D193C9921006FC673 /* Foundation.framework */; };
 		01E0A5A0193C9921006FC673 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 01E0A59F193C9921006FC673 /* CoreGraphics.framework */; };
 		01E0A5A2193C9921006FC673 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 01E0A5A1193C9921006FC673 /* UIKit.framework */; };
@@ -41,6 +43,10 @@
 		01002038193DC24C0063C430 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 		01917CFD1941F92700FF8BD8 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 		01917CFF1942025A00FF8BD8 /* MediaPlayer.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MediaPlayer.framework; path = System/Library/Frameworks/MediaPlayer.framework; sourceTree = SDKROOT; };
+		01B0046E1947459B0009EBE2 /* OverviewViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OverviewViewController.h; sourceTree = "<group>"; };
+		01B0046F1947459B0009EBE2 /* OverviewViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OverviewViewController.m; sourceTree = "<group>"; };
+		01B00471194745AA0009EBE2 /* OverviewView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OverviewView.h; sourceTree = "<group>"; };
+		01B00472194745AA0009EBE2 /* OverviewView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OverviewView.m; sourceTree = "<group>"; };
 		01E0A59A193C9921006FC673 /* API-test.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "API-test.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		01E0A59D193C9921006FC673 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		01E0A59F193C9921006FC673 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -133,6 +139,10 @@
 			children = (
 				01E0A5AC193C9922006FC673 /* AppDelegate.h */,
 				01E0A5AD193C9922006FC673 /* AppDelegate.m */,
+				01B0046E1947459B0009EBE2 /* OverviewViewController.h */,
+				01B0046F1947459B0009EBE2 /* OverviewViewController.m */,
+				01B00471194745AA0009EBE2 /* OverviewView.h */,
+				01B00472194745AA0009EBE2 /* OverviewView.m */,
 				01E0A5CC193C9931006FC673 /* UploadViewController.h */,
 				01E0A5CD193C9931006FC673 /* UploadViewController.m */,
 				01E0A5CF193C993E006FC673 /* UploadView.h */,
@@ -306,6 +316,8 @@
 				01E0A5AE193C9922006FC673 /* AppDelegate.m in Sources */,
 				01E0A5AA193C9921006FC673 /* main.m in Sources */,
 				01E0A5D1193C993E006FC673 /* UploadView.m in Sources */,
+				01B004701947459B0009EBE2 /* OverviewViewController.m in Sources */,
+				01B00473194745AA0009EBE2 /* OverviewView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
