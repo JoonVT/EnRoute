@@ -15,6 +15,6 @@
 @property (nonatomic,strong) NSString *explanation;
 @property (nonatomic,strong) NSDictionary *topColor;
 @property (nonatomic,strong) NSDictionary *bottomColor;
-@property (nonatomic) int streetID;
+@property (nonatomic) int panelID;
 
 @end

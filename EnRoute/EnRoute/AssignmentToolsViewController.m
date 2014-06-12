@@ -14,7 +14,7 @@
 
 @implementation AssignmentToolsViewController
 
-- (id)initWithAssignment:(Assignment *)assignment
+- (id)initWithAssignment:(Assignment *)assignment andFrame:(CGRect)frame
 {
     self = [super initWithNibName:nil bundle:nil];
     if (self) {
@@ -22,7 +22,47 @@
         
         self.assignment = assignment;
         
-        self.title = self.assignment.name;
+        CGFloat topRed = [[assignment.topColor objectForKey:@"red"] floatValue];
+        CGFloat topGreen = [[assignment.topColor objectForKey:@"green"] floatValue];
+        CGFloat topBlue = [[assignment.topColor objectForKey:@"blue"] floatValue];
+        CGFloat topAlpha = [[assignment.topColor objectForKey:@"alpha"] floatValue];
+        
+        CGFloat bottomRed = [[assignment.bottomColor objectForKey:@"red"] floatValue];
+        CGFloat bottomGreen = [[assignment.bottomColor objectForKey:@"green"] floatValue];
+        CGFloat bottomBlue = [[assignment.bottomColor objectForKey:@"blue"] floatValue];
+        CGFloat bottomAlpha = [[assignment.bottomColor objectForKey:@"alpha"] floatValue];
+        
+        UIColor *topColor = [UIColor colorWithRed:topRed green:topGreen blue:topBlue alpha:topAlpha];
+        UIColor *bottomColor = [UIColor colorWithRed:bottomRed green:bottomGreen blue:bottomBlue alpha:bottomAlpha];
+        
+        CAGradientLayer *gradient = [CAGradientLayer layer];
+        gradient.frame = frame;
+        gradient.colors = [NSArray arrayWithObjects:(id)[topColor CGColor], (id)[bottomColor CGColor], nil];
+        [self.view.layer insertSublayer:gradient atIndex:0];
+        
+        UINavigationBar *navigationBar = [[UINavigationBar alloc] initWithFrame:CGRectMake(0, 0, frame.size.width, 66)];
+        UINavigationItem *navigationItem = [[UINavigationItem alloc] initWithTitle:self.assignment.name];
+        
+        navigationBar.tintColor = [UIColor colorWithRed:0.51 green:0.51 blue:0.51 alpha:1];
+        navigationBar.translucent = YES;
+        navigationBar.titleTextAttributes = [NSDictionary dictionaryWithObjectsAndKeys:[UIColor colorWithRed:0.51 green:0.51 blue:0.51 alpha:1],NSForegroundColorAttributeName,[UIFont fontWithName:@"Hallosans-black" size:20.0],NSFontAttributeName,nil];
+        
+        UIView *customBarButtonView = [[UIView alloc]initWithFrame:CGRectMake(0, 0, 50, 30)];
+        
+        UIButton *buttonDone = [UIButton buttonWithType:UIButtonTypeSystem];
+        [buttonDone addTarget:self action:@selector(backTapped:) forControlEvents:UIControlEventTouchUpInside];
+        
+        buttonDone.frame = CGRectMake(0, 0, 50, 30);
+        
+        buttonDone.titleLabel.textColor = [UIColor colorWithRed:0.51 green:0.51 blue:0.51 alpha:1];
+        buttonDone.titleLabel.font = [UIFont fontWithName:@"Hallosans" size:20.0f];
+        [buttonDone setTitle:@"Klaar" forState:UIControlStateNormal];
+        [customBarButtonView addSubview:buttonDone];
+        
+        navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc]initWithCustomView:customBarButtonView];
+        
+        [navigationBar pushNavigationItem:navigationItem animated:NO];
+        [self.view addSubview:navigationBar];
     }
     return self;
 }
@@ -31,13 +71,61 @@
 {
     CGRect bounds = [[UIScreen mainScreen] bounds];
     
-    self.view = [[AssignmentToolsView alloc] initWithFrame:bounds];
+    self.view = [[AssignmentToolsView alloc] initWithAssignment:self.assignment andFrame:bounds];
+}
+
+- (void)backTapped:(id)sender
+{
+    [self dismissViewControllerAnimated:YES completion:^{}];
 }
 
 - (void)viewDidLoad
 {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    
+    [self.view.btnNotes addTarget:self action:@selector(notesTapped:) forControlEvents:UIControlEventTouchUpInside];
+    [self.view.btnFlash addTarget:self action:@selector(flashTapped:) forControlEvents:UIControlEventTouchUpInside];
+    [self.view.btnMicrophone addTarget:self action:@selector(microphoneTapped:) forControlEvents:UIControlEventTouchUpInside];
+    [self.view.btnCamera addTarget:self action:@selector(cameraTapped:) forControlEvents:UIControlEventTouchUpInside];
+}
+
+- (void)notesTapped:(id)sender
+{
+    
+}
+
+- (void)flashTapped:(id)sender
+{
+    AVCaptureDevice * captDevice = [AVCaptureDevice defaultDeviceWithMediaType:AVMediaTypeVideo];
+    
+    if ([captDevice hasFlash]&&[captDevice hasTorch])
+    {
+        if (captDevice.torchMode == AVCaptureTorchModeOff)
+        {
+            [self.view.btnFlash setBackgroundImage:[UIImage imageNamed:@"button_flash_on"] forState:UIControlStateNormal];
+            [captDevice lockForConfiguration:nil];
+            [captDevice setTorchMode:AVCaptureTorchModeOn];
+            [captDevice unlockForConfiguration];
+        }
+        else
+        {
+            [self.view.btnFlash setBackgroundImage:[UIImage imageNamed:@"button_flash"] forState:UIControlStateNormal];
+            [captDevice lockForConfiguration:nil];
+            [captDevice setTorchMode:AVCaptureTorchModeOff];
+            [captDevice unlockForConfiguration];
+        }
+    }
+}
+
+- (void)microphoneTapped:(id)sender
+{
+    
+}
+
+- (void)cameraTapped:(id)sender
+{
+    
 }
 
 - (void)didReceiveMemoryWarning

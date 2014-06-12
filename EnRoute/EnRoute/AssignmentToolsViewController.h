@@ -7,6 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <AVFoundation/AVFoundation.h>
 #import "AssignmentToolsView.h"
 #import "Assignment.h"
 
@@ -16,6 +17,6 @@
 
 @property (strong, nonatomic) Assignment *assignment;
 
-- (id)initWithAssignment:(Assignment *)assignment;
+- (id)initWithAssignment:(Assignment *)assignment andFrame:(CGRect)frame;
 
 @end

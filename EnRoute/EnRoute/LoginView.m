@@ -48,7 +48,8 @@
         
         self.btnStart = [UIButton buttonWithType:UIButtonTypeSystem];
         self.btnStart.frame = CGRectMake(100, self.classSelect.frame.origin.y + self.classSelect.frame.size.height + 5, frame.size.width - 200, 45);
-        self.btnStart.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"button"]];
+        [self.btnStart setBackgroundImage:[UIImage imageNamed:@"button"] forState:UIControlStateNormal];
+        [self.btnStart setBackgroundImage:[UIImage imageNamed:@"button_pressed"] forState:UIControlStateHighlighted];
         self.btnStart.alpha = 0;
         
         self.welcome = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"welcome"]];

@@ -19,7 +19,7 @@
     assignment.explanation = [dictionary objectForKey:@"explanation"];
     assignment.topColor = [dictionary objectForKey:@"color_top"];
     assignment.bottomColor = [dictionary objectForKey:@"color_bottom"];
-    assignment.streetID = [[dictionary objectForKey:@"street_id"] intValue];
+    assignment.panelID = [[dictionary objectForKey:@"panel_id"] intValue];
     
     return assignment;
 }

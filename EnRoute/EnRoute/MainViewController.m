@@ -58,9 +58,9 @@
         [self presentViewController:self.loginVC animated:NO completion:^{}];
     }
     
-    CGRect bounds = [[UIScreen mainScreen] bounds];
+    self.bounds = [[UIScreen mainScreen] bounds];
     
-    self.view = [[MainView alloc] initWithFrame:bounds andAssignments:self.assignments];
+    self.view = [[MainView alloc] initWithFrame:self.bounds andAssignments:self.assignments];
     
     self.view.scrollView.delegate = self;
 }
@@ -70,6 +70,7 @@
     [super viewDidLoad];
     
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(userDefaultsDidChange:) name:NSUserDefaultsDidChangeNotification object:nil];
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(lampTapped:) name:@"lampTapped" object:nil];
 }
 
 -(void) userDefaultsDidChange:(NSNotification*)notification
@@ -88,6 +89,14 @@
     [UIScreen mainScreen].brightness = light - 0.01;
 }
 
+-(void) lampTapped:(NSNotification*)notification
+{
+    Assignment *assignment = [AssignmentFactory createAssignmentWithDictionary:[notification userInfo]];
+    
+    AssignmentToolsViewController *assignmentToolsVC = [[AssignmentToolsViewController alloc] initWithAssignment:assignment andFrame:self.bounds];
+    [self presentViewController:assignmentToolsVC animated:YES completion:^{}];
+}
+
 -(void) brightnessDidChange:(NSNotification*)notification
 {
     float light = [UIScreen mainScreen].brightness;
@@ -99,7 +108,13 @@
 - (void)scrollViewDidEndScrollingAnimation:(UIScrollView *)scrollView
 {
     int page = scrollView.contentOffset.x / scrollView.frame.size.width;
-    self.view.pageControl.currentPage = page;
+    
+    if (page == 0) {
+        self.view.pageControl.hidden = YES;
+    } else {
+        self.view.pageControl.hidden = NO;
+        self.view.pageControl.currentPage = page;
+    }
     
     Assignment *currentAssignment = [self.assignments objectAtIndex:page];
     
@@ -109,7 +124,13 @@
 - (void)scrollViewDidEndDecelerating:(UIScrollView *)scrollView
 {
     int page = scrollView.contentOffset.x / scrollView.frame.size.width;
-    self.view.pageControl.currentPage = page;
+    
+    if (page == 0) {
+        self.view.pageControl.hidden = YES;
+    } else {
+        self.view.pageControl.hidden = NO;
+        self.view.pageControl.currentPage = page;
+    }
     
     Assignment *currentAssignment = [self.assignments objectAtIndex:page];
     

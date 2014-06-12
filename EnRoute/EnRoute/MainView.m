@@ -59,6 +59,7 @@
         
         self.pageControl = [[UIPageControl alloc] initWithFrame:CGRectZero];
         self.pageControl.numberOfPages = assignments.count;
+        self.pageControl.hidden = YES;
         
         CGSize sizeOfPageControl = [self.pageControl sizeForNumberOfPages:self.pageControl.numberOfPages];
         

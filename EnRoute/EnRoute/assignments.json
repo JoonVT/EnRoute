@@ -16,7 +16,7 @@
                 "blue": "0",
                 "alpha": "0"
             },
-            "street_id": 0
+            "panel_id": 0
         }
     },
     {
@@ -36,7 +36,7 @@
                 "blue": "0.21",
                 "alpha": "1"
             },
-            "street_id": 1
+            "panel_id": 1
 		}
 	},
 	{
@@ -56,7 +56,7 @@
                 "blue": "0.25",
                 "alpha": "1"
             },
-            "street_id": 2
+            "panel_id": 2
 		}
 	},
     {
@@ -76,7 +76,7 @@
                 "blue": "0",
                 "alpha": "0"
             },
-            "street_id": 0
+            "panel_id": 0
         }
     }
 ]

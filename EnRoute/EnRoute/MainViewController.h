@@ -22,6 +22,8 @@
 
 @property (nonatomic,strong) NSMutableArray *assignments;
 
+@property (nonatomic) CGRect bounds;
+
 @property (nonatomic) int darkPercentage;
 
 @end
