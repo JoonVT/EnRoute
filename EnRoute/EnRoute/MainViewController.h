@@ -24,6 +24,4 @@
 
 @property (nonatomic) CGRect bounds;
 
-@property (nonatomic) int darkPercentage;
-
 @end

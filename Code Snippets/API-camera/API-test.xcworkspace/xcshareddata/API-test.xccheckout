@@ -5,19 +5,19 @@
 	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
 	<false/>
 	<key>IDESourceControlProjectIdentifier</key>
-	<string>2C743C5A-FEBB-4DB7-A771-6BCAACF841C7</string>
+	<string>DD9E77C0-7943-40AA-8B0D-D3CAF173E878</string>
 	<key>IDESourceControlProjectName</key>
 	<string>API-test</string>
 	<key>IDESourceControlProjectOriginsDictionary</key>
 	<dict>
-		<key>F79C79ED-1344-4070-AAD8-C74E57E339E3</key>
+		<key>07A74943-F4A2-4E10-97E8-D970843CC428</key>
 		<string>https://github.com/JoonVT/EnRoute.git</string>
 	</dict>
 	<key>IDESourceControlProjectPath</key>
 	<string>Code Snippets/API-camera/API-test.xcworkspace</string>
 	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
 	<dict>
-		<key>F79C79ED-1344-4070-AAD8-C74E57E339E3</key>
+		<key>07A74943-F4A2-4E10-97E8-D970843CC428</key>
 		<string>../../..</string>
 	</dict>
 	<key>IDESourceControlProjectURL</key>
@@ -25,16 +25,16 @@
 	<key>IDESourceControlProjectVersion</key>
 	<integer>110</integer>
 	<key>IDESourceControlProjectWCCIdentifier</key>
-	<string>F79C79ED-1344-4070-AAD8-C74E57E339E3</string>
+	<string>07A74943-F4A2-4E10-97E8-D970843CC428</string>
 	<key>IDESourceControlProjectWCConfigurations</key>
 	<array>
 		<dict>
 			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
 			<string>public.vcs.git</string>
 			<key>IDESourceControlWCCIdentifierKey</key>
-			<string>F79C79ED-1344-4070-AAD8-C74E57E339E3</string>
+			<string>07A74943-F4A2-4E10-97E8-D970843CC428</string>
 			<key>IDESourceControlWCCName</key>
-			<string>EnRoute</string>
+			<string>02_ENROUTE</string>
 		</dict>
 	</array>
 </dict>

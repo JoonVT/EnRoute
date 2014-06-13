@@ -81,12 +81,6 @@
         self.loginVC.modalTransitionStyle = UIModalTransitionStyleCrossDissolve;
         [self presentViewController:self.loginVC animated:YES completion:^{}];
     }
-    
-    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(brightnessDidChange:) name:UIScreenBrightnessDidChangeNotification object:nil];
-    
-    float light = [UIScreen mainScreen].brightness;
-    
-    [UIScreen mainScreen].brightness = light - 0.01;
 }
 
 -(void) lampTapped:(NSNotification*)notification
@@ -95,14 +89,6 @@
     
     AssignmentToolsViewController *assignmentToolsVC = [[AssignmentToolsViewController alloc] initWithAssignment:assignment andFrame:self.bounds];
     [self presentViewController:assignmentToolsVC animated:YES completion:^{}];
-}
-
--(void) brightnessDidChange:(NSNotification*)notification
-{
-    float light = [UIScreen mainScreen].brightness;
-    self.darkPercentage = 255*light;
-    
-    NSLog(@"Brightness did change to %f", light*100);
 }
 
 - (void)scrollViewDidEndScrollingAnimation:(UIScrollView *)scrollView

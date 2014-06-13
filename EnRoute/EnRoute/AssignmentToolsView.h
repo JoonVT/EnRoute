@@ -11,6 +11,10 @@
 
 @interface AssignmentToolsView : UIView
 
+@property (strong, nonatomic) UILabel *lblExplanation1;
+@property (strong, nonatomic) UILabel *lblExplanation2;
+@property (strong, nonatomic) UILabel *lblExplanation3;
+
 @property (strong, nonatomic) UIButton *btnNotes;
 @property (strong, nonatomic) UIButton *btnFlash;
 @property (strong, nonatomic) UIButton *btnMicrophone;

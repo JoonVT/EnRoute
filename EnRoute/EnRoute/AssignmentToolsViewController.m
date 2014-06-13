@@ -22,23 +22,11 @@
         
         self.assignment = assignment;
         
-        CGFloat topRed = [[assignment.topColor objectForKey:@"red"] floatValue];
-        CGFloat topGreen = [[assignment.topColor objectForKey:@"green"] floatValue];
-        CGFloat topBlue = [[assignment.topColor objectForKey:@"blue"] floatValue];
-        CGFloat topAlpha = [[assignment.topColor objectForKey:@"alpha"] floatValue];
+        [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(brightnessDidChange:) name:UIScreenBrightnessDidChangeNotification object:nil];
         
-        CGFloat bottomRed = [[assignment.bottomColor objectForKey:@"red"] floatValue];
-        CGFloat bottomGreen = [[assignment.bottomColor objectForKey:@"green"] floatValue];
-        CGFloat bottomBlue = [[assignment.bottomColor objectForKey:@"blue"] floatValue];
-        CGFloat bottomAlpha = [[assignment.bottomColor objectForKey:@"alpha"] floatValue];
+        float light = [UIScreen mainScreen].brightness;
         
-        UIColor *topColor = [UIColor colorWithRed:topRed green:topGreen blue:topBlue alpha:topAlpha];
-        UIColor *bottomColor = [UIColor colorWithRed:bottomRed green:bottomGreen blue:bottomBlue alpha:bottomAlpha];
-        
-        CAGradientLayer *gradient = [CAGradientLayer layer];
-        gradient.frame = frame;
-        gradient.colors = [NSArray arrayWithObjects:(id)[topColor CGColor], (id)[bottomColor CGColor], nil];
-        [self.view.layer insertSublayer:gradient atIndex:0];
+        [UIScreen mainScreen].brightness = light - 0.01;
         
         UINavigationBar *navigationBar = [[UINavigationBar alloc] initWithFrame:CGRectMake(0, 0, frame.size.width, 66)];
         UINavigationItem *navigationItem = [[UINavigationItem alloc] initWithTitle:self.assignment.name];
@@ -92,7 +80,10 @@
 
 - (void)notesTapped:(id)sender
 {
-    
+    NotesTableViewController *notesTVC = [[NotesTableViewController alloc] initWithStyle:UITableViewStylePlain];
+    UINavigationController *navController =  [[UINavigationController alloc] initWithRootViewController:notesTVC];
+    navController.navigationBar.titleTextAttributes = [NSDictionary dictionaryWithObjectsAndKeys:[UIColor colorWithRed:0.51 green:0.51 blue:0.51 alpha:1],NSForegroundColorAttributeName,[UIFont fontWithName:@"Hallosans-black" size:20.0],NSFontAttributeName,nil];
+    [self presentViewController:navController animated:YES completion:^{}];
 }
 
 - (void)flashTapped:(id)sender
@@ -125,7 +116,25 @@
 
 - (void)cameraTapped:(id)sender
 {
+    CameraViewController *cameraVC = [[CameraViewController alloc] initWithAssignment:self.assignment];
+    UINavigationController *navController =  [[UINavigationController alloc] initWithRootViewController:cameraVC];
+    navController.navigationBar.titleTextAttributes = [NSDictionary dictionaryWithObjectsAndKeys:[UIColor colorWithRed:0.51 green:0.51 blue:0.51 alpha:1],NSForegroundColorAttributeName,[UIFont fontWithName:@"Hallosans-black" size:20.0],NSFontAttributeName,nil];
+    [self presentViewController:navController animated:YES completion:^{}];
+}
+
+-(void) brightnessDidChange:(NSNotification*)notification
+{
+    float light = [UIScreen mainScreen].brightness;
+
+    if (light < 0.25) {
+        light = 0.25;
+    }
     
+    NSLog(@"Brightness did change to %f", light*100);
+    
+    [UIView animateWithDuration:1 animations:^{
+        self.view.backgroundColor = [UIColor colorWithRed:light+.25 green:light+.25 blue:light+.25 alpha:1];
+    }];
 }
 
 - (void)didReceiveMemoryWarning

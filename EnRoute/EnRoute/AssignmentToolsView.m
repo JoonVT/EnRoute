@@ -16,6 +16,33 @@
     if (self) {
         // Initialization code
         
+        self.backgroundColor = [UIColor whiteColor];
+        
+        UIImageView *expanation1 = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"explanation1"]];
+        expanation1.frame = CGRectMake(15, 100, 60, 60);
+        UIImageView *expanation2 = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"explanation2"]];
+        expanation2.frame = CGRectMake(frame.size.width-75, 200, 60, 60);
+        UIImageView *expanation3 = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"explanation3"]];
+        expanation3.frame = CGRectMake(15, 300, 60, 60);
+        
+        NSAttributedString *txtExplanation1 = [[NSAttributedString alloc] initWithString:assignment.explanation1 attributes:@{NSFontAttributeName : [UIFont fontWithName:@"Hallosans" size:18], NSForegroundColorAttributeName : [UIColor blackColor], NSKernAttributeName : @(0.5f)}];
+        
+        NSAttributedString *txtExplanation2 = [[NSAttributedString alloc] initWithString:assignment.explanation2 attributes:@{NSFontAttributeName : [UIFont fontWithName:@"Hallosans" size:18], NSForegroundColorAttributeName : [UIColor blackColor], NSKernAttributeName : @(0.5f)}];
+        
+        NSAttributedString *txtExplanation3 = [[NSAttributedString alloc] initWithString:assignment.explanation3 attributes:@{NSFontAttributeName : [UIFont fontWithName:@"Hallosans" size:18], NSForegroundColorAttributeName : [UIColor blackColor], NSKernAttributeName : @(0.5f)}];
+        
+        self.lblExplanation1 = [[UILabel alloc] initWithFrame:CGRectMake(90, 80, frame.size.width-105, 100)];
+        self.lblExplanation1.attributedText = txtExplanation1;
+        self.lblExplanation1.numberOfLines = 0;
+        
+        self.lblExplanation2 = [[UILabel alloc] initWithFrame:CGRectMake(15, 180, frame.size.width-105, 100)];
+        self.lblExplanation2.attributedText = txtExplanation2;
+        self.lblExplanation2.numberOfLines = 0;
+        
+        self.lblExplanation3 = [[UILabel alloc] initWithFrame:CGRectMake(90, 280, frame.size.width-105, 100)];
+        self.lblExplanation3.attributedText = txtExplanation3;
+        self.lblExplanation3.numberOfLines = 0;
+        
         self.btnNotes = [UIButton buttonWithType:UIButtonTypeCustom];
         self.btnNotes.frame = CGRectMake(0, frame.size.height - 81, 80, 81);
         [self.btnNotes setBackgroundImage:[UIImage imageNamed:@"button_notes"] forState:UIControlStateNormal];
@@ -36,6 +63,12 @@
         [self.btnCamera setBackgroundImage:[UIImage imageNamed:@"button_camera"] forState:UIControlStateNormal];
         [self.btnCamera setBackgroundImage:[UIImage imageNamed:@"button_camera_pressed"] forState:UIControlStateHighlighted];
         
+        [self addSubview:expanation1];
+        [self addSubview:expanation2];
+        [self addSubview:expanation3];
+        [self addSubview:self.lblExplanation1];
+        [self addSubview:self.lblExplanation2];
+        [self addSubview:self.lblExplanation3];
         [self addSubview:self.btnNotes];
         [self addSubview:self.btnFlash];
         [self addSubview:self.btnMicrophone];

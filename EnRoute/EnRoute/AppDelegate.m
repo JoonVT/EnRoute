@@ -18,6 +18,7 @@
     MainViewController *mainTVC = [[MainViewController alloc] init];
     UINavigationController *navController = [[UINavigationController alloc] initWithRootViewController:mainTVC];
     self.window.rootViewController = navController;
+    self.window.tintColor = [UIColor colorWithRed:0.51 green:0.51 blue:0.51 alpha:1];
     
     navController.navigationBar.tintColor = [UIColor colorWithRed:0.51 green:0.51 blue:0.51 alpha:1];
     navController.navigationBar.translucent = YES;

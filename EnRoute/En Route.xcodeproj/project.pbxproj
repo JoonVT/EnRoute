@@ -7,6 +7,16 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0118F2741949B44600A9FA11 /* AddNoteView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0118F2661949B44600A9FA11 /* AddNoteView.m */; };
+		0118F2751949B44600A9FA11 /* AddNoteViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0118F2681949B44600A9FA11 /* AddNoteViewController.m */; };
+		0118F2761949B44600A9FA11 /* ColorCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 0118F26A1949B44600A9FA11 /* ColorCell.m */; };
+		0118F2771949B44600A9FA11 /* Note.m in Sources */ = {isa = PBXBuildFile; fileRef = 0118F26C1949B44600A9FA11 /* Note.m */; };
+		0118F2781949B44600A9FA11 /* NotesTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0118F26E1949B44600A9FA11 /* NotesTableViewController.m */; };
+		0118F2791949B44600A9FA11 /* UpdateNoteView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0118F2711949B44600A9FA11 /* UpdateNoteView.m */; };
+		0118F27A1949B44600A9FA11 /* UpdateNoteViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0118F2731949B44600A9FA11 /* UpdateNoteViewController.m */; };
+		01194A8B194B2B9700B1870E /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 01194A8A194B2B9700B1870E /* CoreLocation.framework */; };
+		01194A8D194B2BA100B1870E /* MultipeerConnectivity.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 01194A8C194B2BA100B1870E /* MultipeerConnectivity.framework */; };
+		01194A8F194B2BAB00B1870E /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 01194A8E194B2BAB00B1870E /* AVFoundation.framework */; };
 		01795422193DD4DC00DFFB4E /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 01795421193DD4DC00DFFB4E /* LoginViewController.m */; };
 		01795425193DD4F000DFFB4E /* LoginView.m in Sources */ = {isa = PBXBuildFile; fileRef = 01795424193DD4F000DFFB4E /* LoginView.m */; };
 		01876B77193603650037D9DC /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 01876B76193603650037D9DC /* Foundation.framework */; };
@@ -33,6 +43,8 @@
 		01AE872A193F644800637ECD /* Hallo sans.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 01AE8727193F644800637ECD /* Hallo sans.ttf */; };
 		01AE872B193F644800637ECD /* Hallo sans black.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 01AE8728193F644800637ECD /* Hallo sans black.ttf */; };
 		01AE872C193F644800637ECD /* Hallo sans light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 01AE8729193F644800637ECD /* Hallo sans light.ttf */; };
+		01DCDEE21949E9E1004F47B9 /* CameraView.m in Sources */ = {isa = PBXBuildFile; fileRef = 01DCDEDD1949E9E1004F47B9 /* CameraView.m */; };
+		01DCDEE31949E9E1004F47B9 /* CameraViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 01DCDEDF1949E9E1004F47B9 /* CameraViewController.m */; };
 		2D0ED2C6DB6845AC9034B192 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 92C5C1A96AE24848913ACBFA /* libPods.a */; };
 /* End PBXBuildFile section */
 
@@ -47,6 +59,25 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0118F2641949B44600A9FA11 /* AddNoteDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddNoteDelegate.h; sourceTree = "<group>"; };
+		0118F2651949B44600A9FA11 /* AddNoteView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddNoteView.h; sourceTree = "<group>"; };
+		0118F2661949B44600A9FA11 /* AddNoteView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddNoteView.m; sourceTree = "<group>"; };
+		0118F2671949B44600A9FA11 /* AddNoteViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddNoteViewController.h; sourceTree = "<group>"; };
+		0118F2681949B44600A9FA11 /* AddNoteViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddNoteViewController.m; sourceTree = "<group>"; };
+		0118F2691949B44600A9FA11 /* ColorCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ColorCell.h; sourceTree = "<group>"; };
+		0118F26A1949B44600A9FA11 /* ColorCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ColorCell.m; sourceTree = "<group>"; };
+		0118F26B1949B44600A9FA11 /* Note.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Note.h; sourceTree = "<group>"; };
+		0118F26C1949B44600A9FA11 /* Note.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Note.m; sourceTree = "<group>"; };
+		0118F26D1949B44600A9FA11 /* NotesTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NotesTableViewController.h; sourceTree = "<group>"; };
+		0118F26E1949B44600A9FA11 /* NotesTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NotesTableViewController.m; sourceTree = "<group>"; };
+		0118F26F1949B44600A9FA11 /* UpdateNoteDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UpdateNoteDelegate.h; sourceTree = "<group>"; };
+		0118F2701949B44600A9FA11 /* UpdateNoteView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UpdateNoteView.h; sourceTree = "<group>"; };
+		0118F2711949B44600A9FA11 /* UpdateNoteView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UpdateNoteView.m; sourceTree = "<group>"; };
+		0118F2721949B44600A9FA11 /* UpdateNoteViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UpdateNoteViewController.h; sourceTree = "<group>"; };
+		0118F2731949B44600A9FA11 /* UpdateNoteViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UpdateNoteViewController.m; sourceTree = "<group>"; };
+		01194A8A194B2B9700B1870E /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		01194A8C194B2BA100B1870E /* MultipeerConnectivity.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MultipeerConnectivity.framework; path = System/Library/Frameworks/MultipeerConnectivity.framework; sourceTree = SDKROOT; };
+		01194A8E194B2BAB00B1870E /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 		01795420193DD4DC00DFFB4E /* LoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginViewController.h; sourceTree = "<group>"; };
 		01795421193DD4DC00DFFB4E /* LoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginViewController.m; sourceTree = "<group>"; };
 		01795423193DD4F000DFFB4E /* LoginView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginView.h; sourceTree = "<group>"; };
@@ -86,6 +117,10 @@
 		01AE8727193F644800637ECD /* Hallo sans.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Hallo sans.ttf"; sourceTree = "<group>"; };
 		01AE8728193F644800637ECD /* Hallo sans black.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Hallo sans black.ttf"; sourceTree = "<group>"; };
 		01AE8729193F644800637ECD /* Hallo sans light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Hallo sans light.ttf"; sourceTree = "<group>"; };
+		01DCDEDC1949E9E1004F47B9 /* CameraView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CameraView.h; sourceTree = "<group>"; };
+		01DCDEDD1949E9E1004F47B9 /* CameraView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CameraView.m; sourceTree = "<group>"; };
+		01DCDEDE1949E9E1004F47B9 /* CameraViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CameraViewController.h; sourceTree = "<group>"; };
+		01DCDEDF1949E9E1004F47B9 /* CameraViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CameraViewController.m; sourceTree = "<group>"; };
 		8373DD90F352408F9213D690 /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = "<group>"; };
 		92C5C1A96AE24848913ACBFA /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -95,6 +130,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				01194A8F194B2BAB00B1870E /* AVFoundation.framework in Frameworks */,
+				01194A8D194B2BA100B1870E /* MultipeerConnectivity.framework in Frameworks */,
+				01194A8B194B2B9700B1870E /* CoreLocation.framework in Frameworks */,
 				019B0DC61947543A00E3C450 /* QuartzCore.framework in Frameworks */,
 				01876B79193603650037D9DC /* CoreGraphics.framework in Frameworks */,
 				01876B7B193603650037D9DC /* UIKit.framework in Frameworks */,
@@ -116,6 +154,45 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0118F27B1949B45A00A9FA11 /* UpdateNote */ = {
+			isa = PBXGroup;
+			children = (
+				0118F2721949B44600A9FA11 /* UpdateNoteViewController.h */,
+				0118F2731949B44600A9FA11 /* UpdateNoteViewController.m */,
+				0118F26F1949B44600A9FA11 /* UpdateNoteDelegate.h */,
+				0118F2701949B44600A9FA11 /* UpdateNoteView.h */,
+				0118F2711949B44600A9FA11 /* UpdateNoteView.m */,
+			);
+			name = UpdateNote;
+			sourceTree = "<group>";
+		};
+		0118F27C1949B47D00A9FA11 /* AddNote */ = {
+			isa = PBXGroup;
+			children = (
+				0118F2671949B44600A9FA11 /* AddNoteViewController.h */,
+				0118F2681949B44600A9FA11 /* AddNoteViewController.m */,
+				0118F2641949B44600A9FA11 /* AddNoteDelegate.h */,
+				0118F2651949B44600A9FA11 /* AddNoteView.h */,
+				0118F2661949B44600A9FA11 /* AddNoteView.m */,
+				0118F26B1949B44600A9FA11 /* Note.h */,
+				0118F26C1949B44600A9FA11 /* Note.m */,
+			);
+			name = AddNote;
+			sourceTree = "<group>";
+		};
+		0118F27D1949B49300A9FA11 /* Notes */ = {
+			isa = PBXGroup;
+			children = (
+				0118F26D1949B44600A9FA11 /* NotesTableViewController.h */,
+				0118F26E1949B44600A9FA11 /* NotesTableViewController.m */,
+				0118F2691949B44600A9FA11 /* ColorCell.h */,
+				0118F26A1949B44600A9FA11 /* ColorCell.m */,
+				0118F27C1949B47D00A9FA11 /* AddNote */,
+				0118F27B1949B45A00A9FA11 /* UpdateNote */,
+			);
+			name = Notes;
+			sourceTree = "<group>";
+		};
 		01876B6A193603650037D9DC = {
 			isa = PBXGroup;
 			children = (
@@ -139,6 +216,9 @@
 		01876B75193603650037D9DC /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				01194A8E194B2BAB00B1870E /* AVFoundation.framework */,
+				01194A8C194B2BA100B1870E /* MultipeerConnectivity.framework */,
+				01194A8A194B2B9700B1870E /* CoreLocation.framework */,
 				019B0DC51947543A00E3C450 /* QuartzCore.framework */,
 				01876B76193603650037D9DC /* Foundation.framework */,
 				01876B78193603650037D9DC /* CoreGraphics.framework */,
@@ -166,6 +246,8 @@
 				018D7A431940897300099315 /* AssignmentFactory.m */,
 				018D7A3F1940895500099315 /* Assignment.h */,
 				018D7A401940895500099315 /* Assignment.m */,
+				01DCDEE41949E9EE004F47B9 /* Camera */,
+				0118F27D1949B49300A9FA11 /* Notes */,
 				019B0DCF19476CBD00E3C450 /* AssignmentTools */,
 				01CE898A193F0D3B0040DE04 /* Login */,
 			);
@@ -225,6 +307,17 @@
 				01795424193DD4F000DFFB4E /* LoginView.m */,
 			);
 			name = Login;
+			sourceTree = "<group>";
+		};
+		01DCDEE41949E9EE004F47B9 /* Camera */ = {
+			isa = PBXGroup;
+			children = (
+				01DCDEDE1949E9E1004F47B9 /* CameraViewController.h */,
+				01DCDEDF1949E9E1004F47B9 /* CameraViewController.m */,
+				01DCDEDC1949E9E1004F47B9 /* CameraView.h */,
+				01DCDEDD1949E9E1004F47B9 /* CameraView.m */,
+			);
+			name = Camera;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -361,16 +454,25 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0118F2791949B44600A9FA11 /* UpdateNoteView.m in Sources */,
+				01DCDEE31949E9E1004F47B9 /* CameraViewController.m in Sources */,
+				0118F2771949B44600A9FA11 /* Note.m in Sources */,
 				019B0DCE19476CAF00E3C450 /* AssignmentToolsView.m in Sources */,
 				018D7A471940AC7100099315 /* AssignmentView.m in Sources */,
 				01795425193DD4F000DFFB4E /* LoginView.m in Sources */,
+				0118F2751949B44600A9FA11 /* AddNoteViewController.m in Sources */,
 				01876B87193603650037D9DC /* AppDelegate.m in Sources */,
+				0118F27A1949B44600A9FA11 /* UpdateNoteViewController.m in Sources */,
+				0118F2781949B44600A9FA11 /* NotesTableViewController.m in Sources */,
+				0118F2761949B44600A9FA11 /* ColorCell.m in Sources */,
 				019B0DCB19476C9A00E3C450 /* AssignmentToolsViewController.m in Sources */,
 				01876B83193603650037D9DC /* main.m in Sources */,
 				01876BA71936038A0037D9DC /* MainView.m in Sources */,
 				018D7A411940895500099315 /* Assignment.m in Sources */,
 				01876BAA193603C00037D9DC /* MainViewController.m in Sources */,
 				01795422193DD4DC00DFFB4E /* LoginViewController.m in Sources */,
+				01DCDEE21949E9E1004F47B9 /* CameraView.m in Sources */,
+				0118F2741949B44600A9FA11 /* AddNoteView.m in Sources */,
 				018D7A441940897300099315 /* AssignmentFactory.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

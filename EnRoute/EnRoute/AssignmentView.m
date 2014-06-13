@@ -24,7 +24,7 @@
             
             NSAttributedString *txtLogout = [[NSAttributedString alloc] initWithString:@"KIES EEN ANDERE GROUP" attributes:@{NSFontAttributeName : [UIFont fontWithName:@"Hallosans-Black" size:22], NSForegroundColorAttributeName : [UIColor colorWithRed:0.51 green:0.51 blue:0.51 alpha:1], NSKernAttributeName : @(1.0f)}];
             
-            NSAttributedString *txtExplanation = [[NSAttributedString alloc] initWithString:@"Welkom bij 'Gent Verlicht', waar we Gent op een artistieke manier zullen ontdekken samen met Led. Dit aan de hand van enkele toffe opdrachten." attributes:@{NSFontAttributeName : [UIFont fontWithName:@"Hallosans" size:20], NSForegroundColorAttributeName : [UIColor colorWithRed:0.51 green:0.51 blue:0.51 alpha:1], NSKernAttributeName : @(0.5f)}];
+            NSAttributedString *txtExplanation = [[NSAttributedString alloc] initWithString:assignment.explanation1 attributes:@{NSFontAttributeName : [UIFont fontWithName:@"Hallosans" size:20], NSForegroundColorAttributeName : [UIColor colorWithRed:0.51 green:0.51 blue:0.51 alpha:1], NSKernAttributeName : @(0.5f)}];
             
             self.lblExplanation = [[UILabel alloc] initWithFrame:CGRectMake(15, 70, frame.size.width-30, 100)];
             self.lblExplanation.attributedText = txtExplanation;
@@ -34,10 +34,9 @@
             self.btnNext.frame = CGRectMake(frame.size.width - 50, (frame.size.height/2)-26, 30, 52);
             [self.btnNext setBackgroundImage:[UIImage imageNamed:@"next"] forState:UIControlStateNormal];
             
-            UIButton *logout = [UIButton buttonWithType:UIButtonTypeCustom];
+            UIButton *logout = [UIButton buttonWithType:UIButtonTypeSystem];
             logout.frame = CGRectMake(0, frame.size.height - 45, frame.size.width, 45);
             [logout setBackgroundImage:[UIImage imageNamed:@"button_grey"] forState:UIControlStateNormal];
-            [logout setBackgroundImage:[UIImage imageNamed:@"button_pressed"] forState:UIControlStateHighlighted];
             [logout setAttributedTitle:txtLogout forState:UIControlStateNormal];
             [logout addTarget:self action:@selector(logoutTapped:) forControlEvents:UIControlEventTouchUpInside];
             
@@ -110,7 +109,9 @@
     NSDictionary *assignment = @{
                                  @"id": [NSString stringWithFormat:@"%i", self.assignment.identifier],
                                  @"name": self.assignment.name,
-                                 @"explanation": self.assignment.explanation,
+                                 @"explanation1": self.assignment.explanation1,
+                                 @"explanation2": self.assignment.explanation2,
+                                 @"explanation3": self.assignment.explanation3,
                                  @"color_top": self.assignment.topColor,
                                  @"color_bottom": self.assignment.bottomColor,
                                  @"panel_id": [NSString stringWithFormat:@"%i", self.assignment.panelID]

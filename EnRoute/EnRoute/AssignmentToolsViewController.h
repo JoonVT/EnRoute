@@ -10,6 +10,8 @@
 #import <AVFoundation/AVFoundation.h>
 #import "AssignmentToolsView.h"
 #import "Assignment.h"
+#import "NotesTableViewController.h"
+#import "CameraViewController.h"
 
 @interface AssignmentToolsViewController : UIViewController
 

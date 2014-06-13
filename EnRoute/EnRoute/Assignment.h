@@ -12,7 +12,9 @@
 
 @property (nonatomic) int identifier;
 @property (nonatomic,strong) NSString *name;
-@property (nonatomic,strong) NSString *explanation;
+@property (nonatomic,strong) NSString *explanation1;
+@property (nonatomic,strong) NSString *explanation2;
+@property (nonatomic,strong) NSString *explanation3;
 @property (nonatomic,strong) NSDictionary *topColor;
 @property (nonatomic,strong) NSDictionary *bottomColor;
 @property (nonatomic) int panelID;

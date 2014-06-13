@@ -3,7 +3,7 @@
         "assignment": {
             "id": "0",
             "name": "Super, klaar om Gent te verlichten?",
-            "explanation": "Lorem ipsum and shit …",
+            "explanation1": "Welkom bij 'Gent Verlicht', waar we Gent op een artistieke manier zullen ontdekken samen met Led. Dit aan de hand van enkele toffe opdrachten.",
             "color_top": {
                 "red": "0",
                 "green": "0",
@@ -23,7 +23,9 @@
 		"assignment": {
 			"id": "1",
 			"name": "Schaduwfilm",
-            "explanation": "Door het gebruik van meerdere toestellen in de groep wordt een schaduwfilm gemaakt met gevonden objecten uit de stad. Er is iemand die filmt en andere verlichten de objecten.",
+            "explanation1": "Ga op zoek naar een donkere plaats. Verzamel onderweg zoveel mogelijk voorwerpen die je denk te kunnen gebruiken.",
+            "explanation2": "Verzin een verhaal en gebruik de zaklamp om schaduwen te maken op een muur. ",
+            "explanation3": "Film met de camera jullie volledige film!",
             "color_top": {
                 "red": "0.99",
                 "green": "0.81",
@@ -43,7 +45,9 @@
 		"assignment": {
 			"id": "2",
 			"name": "Lichtgeluid",
-            "explanation": "Door gebruikt te maken van de lichtsensor en flash worden verschillende tonen gemaakt door gebruik van licht. Licht en donker zorgen voor andere tonen.",
+            "explanation1": "Ga op zoek naar een donkere plaats. Verzamel onderweg zoveel mogelijk voorwerpen die je denk te kunnen gebruiken.",
+            "explanation2": "Verzin een verhaal en gebruik de zaklamp om schaduwen te maken op een muur. ",
+            "explanation3": "Film met de camera jullie volledige film!",
             "color_top": {
                 "red": "0.33",
                 "green": "0.79",
