@@ -48,7 +48,7 @@
        [self addSubview:self.playlabel];
 
         
-#warning ZET IN NAV CONTROLLER
+#warning zet upload knop in navcontroller
         self.send = [UIButton buttonWithType:UIButtonTypeSystem];
         [self.send setTitle:@"UPLOAD" forState:UIControlStateNormal];
         self.send.frame = CGRectMake(0,  self.frame.size.height - 50, self.frame.size.width, 50);
