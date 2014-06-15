@@ -80,7 +80,7 @@
 
 - (void)notesTapped:(id)sender
 {
-    NotesTableViewController *notesTVC = [[NotesTableViewController alloc] initWithStyle:UITableViewStylePlain];
+    NotesTableViewController *notesTVC = [[NotesTableViewController alloc] initWithStyle:UITableViewStylePlain andAssignment:self.assignment];
     UINavigationController *navController =  [[UINavigationController alloc] initWithRootViewController:notesTVC];
     navController.navigationBar.titleTextAttributes = [NSDictionary dictionaryWithObjectsAndKeys:[UIColor colorWithRed:0.51 green:0.51 blue:0.51 alpha:1],NSForegroundColorAttributeName,[UIFont fontWithName:@"Hallosans-black" size:20.0],NSFontAttributeName,nil];
     [self presentViewController:navController animated:YES completion:^{}];

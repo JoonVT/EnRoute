@@ -16,7 +16,7 @@
                 "blue": "0",
                 "alpha": "0"
             },
-            "panel_id": 0
+            "panel_id": "0"
         }
     },
     {
@@ -24,7 +24,7 @@
 			"id": "1",
 			"name": "Schaduwfilm",
             "explanation1": "Ga op zoek naar een donkere plaats. Verzamel onderweg zoveel mogelijk voorwerpen die je denk te kunnen gebruiken.",
-            "explanation2": "Verzin een verhaal en gebruik de zaklamp om schaduwen te maken op een muur. ",
+            "explanation2": "Verzin een verhaal en gebruik de zaklamp om schaduwen te maken op een muur.",
             "explanation3": "Film met de camera jullie volledige film!",
             "color_top": {
                 "red": "0.99",
@@ -38,31 +38,97 @@
                 "blue": "0.21",
                 "alpha": "1"
             },
-            "panel_id": 1
+            "panel_id": "1"
 		}
 	},
-	{
-		"assignment": {
-			"id": "2",
-			"name": "Lichtgeluid",
-            "explanation1": "Ga op zoek naar een donkere plaats. Verzamel onderweg zoveel mogelijk voorwerpen die je denk te kunnen gebruiken.",
-            "explanation2": "Verzin een verhaal en gebruik de zaklamp om schaduwen te maken op een muur. ",
-            "explanation3": "Film met de camera jullie volledige film!",
+    {
+        "assignment": {
+            "id": "2",
+            "name": "Lichtgeluid",
+            "explanation1": "not defined",
+            "explanation2": "not defined",
+            "explanation3": "not defined",
             "color_top": {
+                "red": "0.40",
+                "green": "0.86",
+                "blue": "0.74",
+                "alpha": "1"
+            },
+            "color_bottom": {
                 "red": "0.33",
                 "green": "0.79",
                 "blue": "0.63",
                 "alpha": "1"
             },
-            "color_bottom": {
-                "red": "0.05",
-                "green": "0.31",
-                "blue": "0.25",
+            "panel_id": "2"
+        }
+    },
+    {
+        "assignment": {
+            "id": "3",
+            "name": "untitled",
+            "explanation1": "not defined",
+            "explanation2": "not defined",
+            "explanation3": "not defined",
+            "color_top": {
+                "red": "0.40",
+                "green": "0.80",
+                "blue": "0.90",
                 "alpha": "1"
             },
-            "panel_id": 2
-		}
-	},
+            "color_bottom": {
+                "red": "0.18",
+                "green": "0.68",
+                "blue": "0.80",
+                "alpha": "1"
+            },
+            "panel_id": "3"
+        }
+    },
+    {
+        "assignment": {
+            "id": "4",
+            "name": "untitled",
+            "explanation1": "not defined",
+            "explanation2": "not defined",
+            "explanation3": "not defined",
+            "color_top": {
+                "red": "0.90",
+                "green": "0.42",
+                "blue": "0.36",
+                "alpha": "1"
+            },
+            "color_bottom": {
+                "red": "0.85",
+                "green": "0.22",
+                "blue": "0.15",
+                "alpha": "1"
+            },
+            "panel_id": "4"
+        }
+    },
+    {
+        "assignment": {
+            "id": "5",
+            "name": "untitled",
+            "explanation1": "not defined",
+            "explanation2": "not defined",
+            "explanation3": "not defined",
+            "color_top": {
+                "red": "0.67",
+                "green": "0.45",
+                "blue": "0.91",
+                "alpha": "1"
+            },
+            "color_bottom": {
+                "red": "0.53",
+                "green": "0.24",
+                "blue": "0.84",
+                "alpha": "1"
+            },
+            "panel_id": "5"
+        }
+    },
     {
         "assignment": {
             "id": "9999",
@@ -80,7 +146,7 @@
                 "blue": "0",
                 "alpha": "0"
             },
-            "panel_id": 0
+            "panel_id": "0"
         }
     }
 ]

@@ -43,11 +43,28 @@
     [self dismissViewControllerAnimated:YES completion:^{}];
 }
 
-- (void)loadView {
+- (void)loadView
+{    
+    CGRect bounds = [[UIScreen mainScreen] bounds];
+    self.view = [[CameraView alloc] initWithFrame:bounds];
     
-    CGRect sizeofScreen = [[UIScreen mainScreen] bounds];
-    self.view = [[CameraView alloc] initWithFrame:sizeofScreen];
+    CGFloat topRed = [[self.assignment.topColor objectForKey:@"red"] floatValue];
+    CGFloat topGreen = [[self.assignment.topColor objectForKey:@"green"] floatValue];
+    CGFloat topBlue = [[self.assignment.topColor objectForKey:@"blue"] floatValue];
+    CGFloat topAlpha = [[self.assignment.topColor objectForKey:@"alpha"] floatValue];
     
+    CGFloat bottomRed = [[self.assignment.bottomColor objectForKey:@"red"] floatValue];
+    CGFloat bottomGreen = [[self.assignment.bottomColor objectForKey:@"green"] floatValue];
+    CGFloat bottomBlue = [[self.assignment.bottomColor objectForKey:@"blue"] floatValue];
+    CGFloat bottomAlpha = [[self.assignment.bottomColor objectForKey:@"alpha"] floatValue];
+    
+    UIColor *topColor = [UIColor colorWithRed:topRed green:topGreen blue:topBlue alpha:topAlpha];
+    UIColor *bottomColor = [UIColor colorWithRed:bottomRed green:bottomGreen blue:bottomBlue alpha:bottomAlpha];
+    
+    CAGradientLayer *gradient = [CAGradientLayer layer];
+    gradient.frame = bounds;
+    gradient.colors = [NSArray arrayWithObjects:(id)[topColor CGColor], (id)[bottomColor CGColor], nil];
+    [self.view.layer insertSublayer:gradient atIndex:0];
 }
 
 - (void)viewDidLoad

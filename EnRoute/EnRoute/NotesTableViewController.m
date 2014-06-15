@@ -14,14 +14,34 @@
 
 @implementation NotesTableViewController
 
-- (id)initWithStyle:(UITableViewStyle)style
+- (id)initWithStyle:(UITableViewStyle)style andAssignment:(Assignment *)assignment
 {
     self = [super initWithStyle:style];
     if (self)
     {
         self.title = @"Notities";
         
-        self.view.backgroundColor = [UIColor colorWithRed:0.58 green:0.86 blue:0.8 alpha:1];
+        self.assignment = assignment;
+        
+        CGFloat topRed = [[assignment.topColor objectForKey:@"red"] floatValue];
+        CGFloat topGreen = [[assignment.topColor objectForKey:@"green"] floatValue];
+        CGFloat topBlue = [[assignment.topColor objectForKey:@"blue"] floatValue];
+        CGFloat topAlpha = [[assignment.topColor objectForKey:@"alpha"] floatValue];
+        
+        CGFloat bottomRed = [[assignment.bottomColor objectForKey:@"red"] floatValue];
+        CGFloat bottomGreen = [[assignment.bottomColor objectForKey:@"green"] floatValue];
+        CGFloat bottomBlue = [[assignment.bottomColor objectForKey:@"blue"] floatValue];
+        CGFloat bottomAlpha = [[assignment.bottomColor objectForKey:@"alpha"] floatValue];
+        
+        UIColor *topColor = [UIColor colorWithRed:topRed green:topGreen blue:topBlue alpha:topAlpha];
+        UIColor *bottomColor = [UIColor colorWithRed:bottomRed green:bottomGreen blue:bottomBlue alpha:bottomAlpha];
+        
+        CGRect bounds = [[UIScreen mainScreen] bounds];
+        
+        CAGradientLayer *gradient = [CAGradientLayer layer];
+        gradient.frame = bounds;
+        gradient.colors = [NSArray arrayWithObjects:(id)[topColor CGColor], (id)[bottomColor CGColor], nil];
+        [self.view.layer insertSublayer:gradient atIndex:0];
         
         UIView *btnDoneView = [[UIView alloc]initWithFrame:CGRectMake(0, 0, 50, 30)];
         UIView *btnAddView = [[UIView alloc]initWithFrame:CGRectMake(0, 0, 50, 30)];
@@ -142,7 +162,14 @@
     NSString *notetext = note.note;
     
     AFHTTPRequestOperationManager *manager = [AFHTTPRequestOperationManager manager];
-    NSDictionary *parameters = @{@"note": notetext, @"groupid": @"1", @"assignmentid": @"1"};
+    
+    NSDictionary *group = [[NSUserDefaults standardUserDefaults] objectForKey:@"group"];
+    
+    NSDictionary *parameters = @{
+                                 @"note": notetext,
+                                 @"groupid": [group objectForKey:@"id"],
+                                 @"assignmentid": [NSString stringWithFormat:@"%i", self.assignment.identifier]
+                                 };
     
     manager.responseSerializer.acceptableContentTypes = [NSSet setWithObject:@"text/html"];
     [manager POST:onlineURL parameters:parameters success:^(AFHTTPRequestOperation *operation, id responseObject)
@@ -160,7 +187,8 @@
     failure:^(AFHTTPRequestOperation *operation, NSError *error)
     {
         NSLog(@"Error: %@", error);
-#warning add ERROR when not online/can't be uploaded
+        UIAlertView *alertError = [[UIAlertView alloc] initWithTitle:@"Oei, oei" message:@"Er is iets foutgelopen…\nheb je wel internet?" delegate:self cancelButtonTitle:@"Ok, niet erg" otherButtonTitles:nil];
+        [alertError show];
     }];
 }
 
@@ -187,7 +215,8 @@
 
     } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
         NSLog(@"Error: %@", error);
-#warning add ERROR when not online/can't update
+        UIAlertView *alertError = [[UIAlertView alloc] initWithTitle:@"Oei, oei" message:@"Er is iets foutgelopen…\nheb je wel internet?" delegate:self cancelButtonTitle:@"Ok, niet erg" otherButtonTitles:nil];
+        [alertError show];
     }];
 }
 
@@ -226,7 +255,8 @@
             
         } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
             NSLog(@"Error: %@", error);
-#warning add ERROR when not online/can't be deleted
+            UIAlertView *alertError = [[UIAlertView alloc] initWithTitle:@"Oei, oei" message:@"Er is iets foutgelopen…\nheb je wel internet?" delegate:self cancelButtonTitle:@"Ok, niet erg" otherButtonTitles:nil];
+            [alertError show];
         }];
     }
 }
