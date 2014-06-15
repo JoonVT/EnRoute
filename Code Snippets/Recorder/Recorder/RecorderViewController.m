@@ -53,8 +53,9 @@
     NSString *onlineURL = @"http://student.howest.be/niels.boey/20132014/MAIV/ENROUTE/api/files";
     
     AFHTTPRequestOperationManager *manager = [AFHTTPRequestOperationManager manager];
-#warning update parameters met GroupID, ClassID en MediaID
-    NSDictionary *parameters = @{@"groupid": @"1", @"classid": @"1", @"mediaid": @"1"};
+
+#warning update parameters & add locationmanager
+    NSDictionary *parameters = @{@"groupid": @"1", @"classid": @"1", @"mediaid": @"1", @"assignmentid": @"1", @"latitude": @"0", @"longitude": @"0"};
     
     manager.responseSerializer = [AFHTTPResponseSerializer serializer];
     
@@ -71,6 +72,13 @@
     
 
 -(void)playAudio:(id)sender {
+    [self.audioSession setCategory:AVAudioSessionCategoryPlayback error:nil];
+    
+    NSError *audioError;
+    self.player = [[AVAudioPlayer alloc] initWithContentsOfURL:self.recordedAudioURL error:&audioError];
+    self.player.delegate = self;
+
+    
     if(self.playingaudio == NO){
         [self.player play];
         self.view.playlabel.text = @"PAUZEREN";
@@ -112,6 +120,13 @@
 
 -(void)record:(id)sender {
     
+    if(self.playingaudio == YES){
+        [self.player pause];
+        self.view.playlabel.text = @"AFSPELEN";
+        [self.view.play setImage:[UIImage imageNamed:@"playbutton"] forState:UIControlStateNormal];
+        self.playingaudio = NO;
+    }
+    
     if(self.isRecording == NO){
         self.view.label.text = @"STOP";
         
@@ -138,6 +153,7 @@
         
         [self.recorder recordForDuration:60];
         self.isRecording = YES;
+        
         
         self.timer = [NSTimer scheduledTimerWithTimeInterval:1 target:self selector:@selector(timerUpdate) userInfo:nil repeats:YES];
     }else {
