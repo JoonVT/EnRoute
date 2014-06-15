@@ -37,6 +37,8 @@
 		018D7A411940895500099315 /* Assignment.m in Sources */ = {isa = PBXBuildFile; fileRef = 018D7A401940895500099315 /* Assignment.m */; };
 		018D7A441940897300099315 /* AssignmentFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = 018D7A431940897300099315 /* AssignmentFactory.m */; };
 		018D7A471940AC7100099315 /* AssignmentView.m in Sources */ = {isa = PBXBuildFile; fileRef = 018D7A461940AC7100099315 /* AssignmentView.m */; };
+		019A66BD194E475C004FC139 /* RecorderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 019A66BA194E475C004FC139 /* RecorderView.m */; };
+		019A66BE194E475C004FC139 /* RecorderViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 019A66BC194E475C004FC139 /* RecorderViewController.m */; };
 		019B0DC61947543A00E3C450 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 019B0DC51947543A00E3C450 /* QuartzCore.framework */; };
 		019B0DCB19476C9A00E3C450 /* AssignmentToolsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 019B0DCA19476C9A00E3C450 /* AssignmentToolsViewController.m */; };
 		019B0DCE19476CAF00E3C450 /* AssignmentToolsView.m in Sources */ = {isa = PBXBuildFile; fileRef = 019B0DCD19476CAF00E3C450 /* AssignmentToolsView.m */; };
@@ -109,6 +111,10 @@
 		018D7A431940897300099315 /* AssignmentFactory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AssignmentFactory.m; sourceTree = "<group>"; };
 		018D7A451940AC7100099315 /* AssignmentView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AssignmentView.h; sourceTree = "<group>"; };
 		018D7A461940AC7100099315 /* AssignmentView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AssignmentView.m; sourceTree = "<group>"; };
+		019A66B9194E475C004FC139 /* RecorderView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RecorderView.h; sourceTree = "<group>"; };
+		019A66BA194E475C004FC139 /* RecorderView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RecorderView.m; sourceTree = "<group>"; };
+		019A66BB194E475C004FC139 /* RecorderViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RecorderViewController.h; sourceTree = "<group>"; };
+		019A66BC194E475C004FC139 /* RecorderViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RecorderViewController.m; sourceTree = "<group>"; };
 		019B0DC51947543A00E3C450 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		019B0DC919476C9A00E3C450 /* AssignmentToolsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AssignmentToolsViewController.h; sourceTree = "<group>"; };
 		019B0DCA19476C9A00E3C450 /* AssignmentToolsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AssignmentToolsViewController.m; sourceTree = "<group>"; };
@@ -240,15 +246,11 @@
 				01876BA9193603C00037D9DC /* MainViewController.m */,
 				01876BA51936038A0037D9DC /* MainView.h */,
 				01876BA61936038A0037D9DC /* MainView.m */,
-				018D7A451940AC7100099315 /* AssignmentView.h */,
-				018D7A461940AC7100099315 /* AssignmentView.m */,
-				018D7A421940897300099315 /* AssignmentFactory.h */,
-				018D7A431940897300099315 /* AssignmentFactory.m */,
-				018D7A3F1940895500099315 /* Assignment.h */,
-				018D7A401940895500099315 /* Assignment.m */,
-				01DCDEE41949E9EE004F47B9 /* Camera */,
-				0118F27D1949B49300A9FA11 /* Notes */,
+				019A66BF194E4D42004FC139 /* Assignments */,
 				019B0DCF19476CBD00E3C450 /* AssignmentTools */,
+				0118F27D1949B49300A9FA11 /* Notes */,
+				019A66B8194E4730004FC139 /* Recorder */,
+				01DCDEE41949E9EE004F47B9 /* Camera */,
 				01CE898A193F0D3B0040DE04 /* Login */,
 			);
 			path = EnRoute;
@@ -285,6 +287,30 @@
 				01876B98193603650037D9DC /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		019A66B8194E4730004FC139 /* Recorder */ = {
+			isa = PBXGroup;
+			children = (
+				019A66BB194E475C004FC139 /* RecorderViewController.h */,
+				019A66BC194E475C004FC139 /* RecorderViewController.m */,
+				019A66B9194E475C004FC139 /* RecorderView.h */,
+				019A66BA194E475C004FC139 /* RecorderView.m */,
+			);
+			name = Recorder;
+			sourceTree = "<group>";
+		};
+		019A66BF194E4D42004FC139 /* Assignments */ = {
+			isa = PBXGroup;
+			children = (
+				018D7A451940AC7100099315 /* AssignmentView.h */,
+				018D7A461940AC7100099315 /* AssignmentView.m */,
+				018D7A421940897300099315 /* AssignmentFactory.h */,
+				018D7A431940897300099315 /* AssignmentFactory.m */,
+				018D7A3F1940895500099315 /* Assignment.h */,
+				018D7A401940895500099315 /* Assignment.m */,
+			);
+			name = Assignments;
 			sourceTree = "<group>";
 		};
 		019B0DCF19476CBD00E3C450 /* AssignmentTools */ = {
@@ -460,6 +486,7 @@
 				019B0DCE19476CAF00E3C450 /* AssignmentToolsView.m in Sources */,
 				018D7A471940AC7100099315 /* AssignmentView.m in Sources */,
 				01795425193DD4F000DFFB4E /* LoginView.m in Sources */,
+				019A66BE194E475C004FC139 /* RecorderViewController.m in Sources */,
 				0118F2751949B44600A9FA11 /* AddNoteViewController.m in Sources */,
 				01876B87193603650037D9DC /* AppDelegate.m in Sources */,
 				0118F27A1949B44600A9FA11 /* UpdateNoteViewController.m in Sources */,
@@ -468,6 +495,7 @@
 				019B0DCB19476C9A00E3C450 /* AssignmentToolsViewController.m in Sources */,
 				01876B83193603650037D9DC /* main.m in Sources */,
 				01876BA71936038A0037D9DC /* MainView.m in Sources */,
+				019A66BD194E475C004FC139 /* RecorderView.m in Sources */,
 				018D7A411940895500099315 /* Assignment.m in Sources */,
 				01876BAA193603C00037D9DC /* MainViewController.m in Sources */,
 				01795422193DD4DC00DFFB4E /* LoginViewController.m in Sources */,

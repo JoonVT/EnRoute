@@ -11,6 +11,7 @@
 #import "AssignmentToolsView.h"
 #import "Assignment.h"
 #import "NotesTableViewController.h"
+#import "RecorderViewController.h"
 #import "CameraViewController.h"
 
 @interface AssignmentToolsViewController : UIViewController
