@@ -21,8 +21,8 @@
 		0145696B194B32120050DB2A /* LocationMapTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 0145696A194B32120050DB2A /* LocationMapTests.m */; };
 		01456976194B32200050DB2A /* LocationView.m in Sources */ = {isa = PBXBuildFile; fileRef = 01456975194B32200050DB2A /* LocationView.m */; };
 		01456979194B322B0050DB2A /* LocationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 01456978194B322B0050DB2A /* LocationViewController.m */; };
-		0145697C194B394B0050DB2A /* Assignment.m in Sources */ = {isa = PBXBuildFile; fileRef = 0145697B194B394B0050DB2A /* Assignment.m */; };
-		0145697F194B39B40050DB2A /* AssignmentsFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = 0145697E194B39B40050DB2A /* AssignmentsFactory.m */; };
+		0145697C194B394B0050DB2A /* CompletedAssignment.m in Sources */ = {isa = PBXBuildFile; fileRef = 0145697B194B394B0050DB2A /* CompletedAssignment.m */; };
+		0145697F194B39B40050DB2A /* CompletedAssignmentsFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = 0145697E194B39B40050DB2A /* CompletedAssignmentsFactory.m */; };
 		01456981194B9CA10050DB2A /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 01456980194B9CA10050DB2A /* MapKit.framework */; };
 		69A6A68273E54387BA304E62 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = BF0F34EECF0B41EA95AA8427 /* libPods.a */; };
 /* End PBXBuildFile section */
@@ -58,10 +58,10 @@
 		01456975194B32200050DB2A /* LocationView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LocationView.m; sourceTree = "<group>"; };
 		01456977194B322B0050DB2A /* LocationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LocationViewController.h; sourceTree = "<group>"; };
 		01456978194B322B0050DB2A /* LocationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LocationViewController.m; sourceTree = "<group>"; };
-		0145697A194B394B0050DB2A /* Assignment.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Assignment.h; sourceTree = "<group>"; };
-		0145697B194B394B0050DB2A /* Assignment.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Assignment.m; sourceTree = "<group>"; };
-		0145697D194B39B40050DB2A /* AssignmentsFactory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AssignmentsFactory.h; sourceTree = "<group>"; };
-		0145697E194B39B40050DB2A /* AssignmentsFactory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AssignmentsFactory.m; sourceTree = "<group>"; };
+		0145697A194B394B0050DB2A /* CompletedAssignment.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CompletedAssignment.h; sourceTree = "<group>"; };
+		0145697B194B394B0050DB2A /* CompletedAssignment.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CompletedAssignment.m; sourceTree = "<group>"; };
+		0145697D194B39B40050DB2A /* CompletedAssignmentsFactory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CompletedAssignmentsFactory.h; sourceTree = "<group>"; };
+		0145697E194B39B40050DB2A /* CompletedAssignmentsFactory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CompletedAssignmentsFactory.m; sourceTree = "<group>"; };
 		01456980194B9CA10050DB2A /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		BF0F34EECF0B41EA95AA8427 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		F8A93B4300D44C8D91326EA3 /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = "<group>"; };
@@ -135,10 +135,10 @@
 				01456978194B322B0050DB2A /* LocationViewController.m */,
 				01456974194B32200050DB2A /* LocationView.h */,
 				01456975194B32200050DB2A /* LocationView.m */,
-				0145697A194B394B0050DB2A /* Assignment.h */,
-				0145697B194B394B0050DB2A /* Assignment.m */,
-				0145697D194B39B40050DB2A /* AssignmentsFactory.h */,
-				0145697E194B39B40050DB2A /* AssignmentsFactory.m */,
+				0145697A194B394B0050DB2A /* CompletedAssignment.h */,
+				0145697B194B394B0050DB2A /* CompletedAssignment.m */,
+				0145697D194B39B40050DB2A /* CompletedAssignmentsFactory.h */,
+				0145697E194B39B40050DB2A /* CompletedAssignmentsFactory.m */,
 				01456957194B32120050DB2A /* Images.xcassets */,
 				0145694C194B32120050DB2A /* Supporting Files */,
 			);
@@ -307,8 +307,8 @@
 				01456976194B32200050DB2A /* LocationView.m in Sources */,
 				01456956194B32120050DB2A /* AppDelegate.m in Sources */,
 				01456952194B32120050DB2A /* main.m in Sources */,
-				0145697F194B39B40050DB2A /* AssignmentsFactory.m in Sources */,
-				0145697C194B394B0050DB2A /* Assignment.m in Sources */,
+				0145697F194B39B40050DB2A /* CompletedAssignmentsFactory.m in Sources */,
+				0145697C194B394B0050DB2A /* CompletedAssignment.m in Sources */,
 				01456979194B322B0050DB2A /* LocationViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

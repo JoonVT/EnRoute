@@ -12,7 +12,7 @@
 #import <AVFoundation/AVFoundation.h>
 #import <CoreLocation/CoreLocation.h>
 #import "LookView.h"
-#import "RecorderViewController.h"
+#import "RecordViewController.h"
 
 @interface LookViewController : UIViewController <MCSessionDelegate, MCBrowserViewControllerDelegate, AVAudioPlayerDelegate, UIImagePickerControllerDelegate, UINavigationControllerDelegate>
 
@@ -25,7 +25,7 @@
 
 @property (nonatomic,strong) NSURL *mediaURL;
 
-@property (nonatomic,strong) RecorderViewController *recorderVC;
+@property (nonatomic,strong) RecordViewController *recordVC;
 
 @property (nonatomic,strong) AVAudioSession *audioSession;
 @property (nonatomic,strong) AVAudioPlayer *player;

@@ -26,7 +26,7 @@
 }
 
 -(void)updateWithLocations:(NSArray *)locations{
-    for(Assignment *assignment in locations){
+    for(CompletedAssignment *assignment in locations){
         RMPointAnnotation *annotation = [[RMPointAnnotation alloc] initWithMapView:self.mapView coordinate:assignment.coordinate andTitle:assignment.assignmentTitle];
         NSString *assignmentid = [NSString stringWithFormat:@"%d", assignment.identifier];
         annotation.userInfo = assignmentid;

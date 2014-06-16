@@ -6,8 +6,8 @@
 //  Copyright (c) 2014 devine. All rights reserved.
 //
 
-#import "Assignment.h"
+#import "CompletedAssignment.h"
 
-@implementation Assignment
+@implementation CompletedAssignment
 
 @end

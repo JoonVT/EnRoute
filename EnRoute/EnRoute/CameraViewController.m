@@ -313,6 +313,9 @@
     {
         NSLog(@"Error: %@", [error debugDescription]);
         NSLog(@"Error: %@", [error localizedDescription]);
+        
+        UIAlertView *alertError = [[UIAlertView alloc] initWithTitle:@"Oei, oei" message:@"Er is iets foutgelopen…\nheb je wel internet?" delegate:self cancelButtonTitle:@"Ok, niet erg" otherButtonTitles:nil];
+        [alertError show];
     }];
     
 }

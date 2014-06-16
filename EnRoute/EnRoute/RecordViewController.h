@@ -8,11 +8,11 @@
 
 #import <UIKit/UIKit.h>
 #import <AVFoundation/AVFoundation.h>
-#import "RecorderView.h"
+#import "RecordView.h"
 
-@interface RecorderViewController : UIViewController <AVAudioPlayerDelegate, AVAudioRecorderDelegate>
+@interface RecordViewController : UIViewController <AVAudioPlayerDelegate, AVAudioRecorderDelegate>
 
-@property (nonatomic,strong) RecorderView *view;
+@property (nonatomic,strong) RecordView *view;
 
 @property (nonatomic,strong) AVAudioSession *audioSession;
 @property (nonatomic,strong) AVAudioRecorder *recorder;

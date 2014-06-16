@@ -44,10 +44,10 @@
     {
         "assignment": {
             "id": "2",
-            "name": "Lichtgeluid",
-            "explanation1": "not defined",
-            "explanation2": "not defined",
-            "explanation3": "not defined",
+            "name": "Lichttextuur",
+            "explanation1": "Ga op zoek naar interresante texturen waar je veel licht of donker in ziet.",
+            "explanation2": "Fotografeer deze texturen en let op interresante lichtinvallen.",
+            "explanation3": "Toon jouw texturen aan de anderen en vergelijk.",
             "color_top": {
                 "red": "0.40",
                 "green": "0.86",
@@ -66,10 +66,10 @@
     {
         "assignment": {
             "id": "3",
-            "name": "untitled",
-            "explanation1": "not defined",
-            "explanation2": "not defined",
-            "explanation3": "not defined",
+            "name": "Ik zie, ik zie",
+            "explanation1": "Verbind met de anderen die in je buurt zijn om samen te spelen.",
+            "explanation2": "Zoek naar iets of iemand interresant in de buurt en beschrijf het voor de anderen door op te nemen wat je ziet.",
+            "explanation3": "De anderen kunnen raden wat jij gezien hebt door er een foto van te nemen. Jij beslist of het juist was.",
             "color_top": {
                 "red": "0.40",
                 "green": "0.80",

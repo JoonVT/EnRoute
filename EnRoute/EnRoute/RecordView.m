@@ -6,9 +6,9 @@
 //  Copyright (c) 2014 devine. All rights reserved.
 //
 
-#import "RecorderView.h"
+#import "RecordView.h"
 
-@implementation RecorderView
+@implementation RecordView
 
 - (id)initWithFrame:(CGRect)frame
 {
@@ -29,13 +29,11 @@
         self.title.font = [UIFont fontWithName:@"Hallosans-Black" size:18];
         [self addSubview:self.title];
 
+        NSAttributedString *txtSend = [[NSAttributedString alloc] initWithString:@"VERSTUUR" attributes:@{NSFontAttributeName : [UIFont fontWithName:@"Hallosans-Black" size:22], NSForegroundColorAttributeName : [UIColor colorWithRed:0.76 green:0.62 blue:0.18 alpha:1], NSKernAttributeName : @(1.0f)}];
         
-#warning UPDATE WITH YELLOW BUTTON
-
-        
-        self.send = [UIButton buttonWithType:UIButtonTypeSystem];
-        self.send.frame = CGRectMake((self.frame.size.width - (self.frame.size.width / 2))/2, self.frame.size.height - 50, self.frame.size.width / 2, 45);
-         self.send.titleLabel.text = @"SEND";
+        self.send = [UIButton buttonWithType:UIButtonTypeCustom];
+        self.send.frame = CGRectMake(50, self.frame.size.height-65, self.frame.size.width - 100, 45);
+        [self.send setAttributedTitle:txtSend forState:UIControlStateNormal];
         [self.send setBackgroundImage:[UIImage imageNamed:@"button"] forState:UIControlStateNormal];
         [self.send setBackgroundImage:[UIImage imageNamed:@"button_pressed"] forState:UIControlStateHighlighted];
         self.send.hidden = YES;

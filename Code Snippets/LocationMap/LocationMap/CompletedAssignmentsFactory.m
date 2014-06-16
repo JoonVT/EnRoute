@@ -6,12 +6,13 @@
 //  Copyright (c) 2014 devine. All rights reserved.
 //
 
-#import "AssignmentsFactory.h"
+#import "CompletedAssignmentsFactory.h"
 
-@implementation AssignmentsFactory
+@implementation CompletedAssignmentsFactory
 
-+(Assignment *)createAssignmentWithDictionary:(NSDictionary *)dictionary {
-    Assignment *assignment = [[Assignment alloc] init];
++(CompletedAssignment *)createCompletedAssignmentWithDictionary:(NSDictionary *)dictionary
+{
+    CompletedAssignment *assignment = [[CompletedAssignment alloc] init];
     
     assignment.identifier = [[dictionary objectForKey:@"id"] intValue];
     assignment.mediaid = [dictionary objectForKey:@"mediaid"];

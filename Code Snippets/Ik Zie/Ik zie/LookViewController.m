@@ -307,7 +307,7 @@
         [self.session sendData:data toPeers:[self.session connectedPeers] withMode:MCSessionSendDataReliable error:&error];
     });
    
-    self.recorderVC = [[RecorderViewController alloc] initWithNibName:nil bundle:nil];
+    self.recordVC = [[RecordViewController alloc] initWithNibName:nil bundle:nil];
     [self.navigationController pushViewController:self.recorderVC animated:YES];
 
 }

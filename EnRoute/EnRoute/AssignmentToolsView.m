@@ -43,6 +43,19 @@
         self.lblExplanation3.attributedText = txtExplanation3;
         self.lblExplanation3.numberOfLines = 0;
         
+        if (assignment.identifier == 3)
+        {
+            NSAttributedString *txtStart = [[NSAttributedString alloc] initWithString:@"START" attributes:@{NSFontAttributeName : [UIFont fontWithName:@"Hallosans-Black" size:22], NSForegroundColorAttributeName : [UIColor colorWithRed:0.76 green:0.62 blue:0.18 alpha:1], NSKernAttributeName : @(1.0f)}];
+            
+            self.btnMultipeer = [UIButton buttonWithType:UIButtonTypeSystem];
+            self.btnMultipeer.frame = CGRectMake(100, 410, frame.size.width - 200, 45);
+            [self.btnMultipeer setBackgroundImage:[UIImage imageNamed:@"button"] forState:UIControlStateNormal];
+            [self.btnMultipeer setBackgroundImage:[UIImage imageNamed:@"button_pressed"] forState:UIControlStateHighlighted];
+            [self.btnMultipeer setAttributedTitle:txtStart forState:UIControlStateNormal];
+            
+            [self addSubview:self.btnMultipeer];
+        }
+        
         self.btnNotes = [UIButton buttonWithType:UIButtonTypeCustom];
         self.btnNotes.frame = CGRectMake(0, frame.size.height - 81, 80, 81);
         [self.btnNotes setBackgroundImage:[UIImage imageNamed:@"button_notes"] forState:UIControlStateNormal];

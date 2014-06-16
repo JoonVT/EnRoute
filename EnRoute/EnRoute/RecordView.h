@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface RecorderView : UIView
+@interface RecordView : UIView
 
 @property (nonatomic,strong) UIButton *send;
 @property (nonatomic,strong) UIButton *record;

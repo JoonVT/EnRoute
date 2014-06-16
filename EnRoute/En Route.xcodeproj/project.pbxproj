@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		010509E3194F262B00AFE2B7 /* CompletedAssignment.m in Sources */ = {isa = PBXBuildFile; fileRef = 010509E0194F262B00AFE2B7 /* CompletedAssignment.m */; };
+		010509E4194F262B00AFE2B7 /* CompletedAssignmentsFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = 010509E2194F262B00AFE2B7 /* CompletedAssignmentsFactory.m */; };
 		0118F2741949B44600A9FA11 /* AddNoteView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0118F2661949B44600A9FA11 /* AddNoteView.m */; };
 		0118F2751949B44600A9FA11 /* AddNoteViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0118F2681949B44600A9FA11 /* AddNoteViewController.m */; };
 		0118F2761949B44600A9FA11 /* ColorCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 0118F26A1949B44600A9FA11 /* ColorCell.m */; };
@@ -17,6 +19,10 @@
 		01194A8B194B2B9700B1870E /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 01194A8A194B2B9700B1870E /* CoreLocation.framework */; };
 		01194A8D194B2BA100B1870E /* MultipeerConnectivity.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 01194A8C194B2BA100B1870E /* MultipeerConnectivity.framework */; };
 		01194A8F194B2BAB00B1870E /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 01194A8E194B2BAB00B1870E /* AVFoundation.framework */; };
+		01630E6C194EDC3700AC0194 /* LookView.m in Sources */ = {isa = PBXBuildFile; fileRef = 01630E65194EDC3700AC0194 /* LookView.m */; };
+		01630E6D194EDC3700AC0194 /* LookViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 01630E67194EDC3700AC0194 /* LookViewController.m */; };
+		01630E6E194EDC3700AC0194 /* RecordView.m in Sources */ = {isa = PBXBuildFile; fileRef = 01630E69194EDC3700AC0194 /* RecordView.m */; };
+		01630E6F194EDC3700AC0194 /* RecordViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 01630E6B194EDC3700AC0194 /* RecordViewController.m */; };
 		01795422193DD4DC00DFFB4E /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 01795421193DD4DC00DFFB4E /* LoginViewController.m */; };
 		01795425193DD4F000DFFB4E /* LoginView.m in Sources */ = {isa = PBXBuildFile; fileRef = 01795424193DD4F000DFFB4E /* LoginView.m */; };
 		01876B77193603650037D9DC /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 01876B76193603650037D9DC /* Foundation.framework */; };
@@ -61,6 +67,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		010509DF194F262B00AFE2B7 /* CompletedAssignment.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CompletedAssignment.h; sourceTree = "<group>"; };
+		010509E0194F262B00AFE2B7 /* CompletedAssignment.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CompletedAssignment.m; sourceTree = "<group>"; };
+		010509E1194F262B00AFE2B7 /* CompletedAssignmentsFactory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CompletedAssignmentsFactory.h; sourceTree = "<group>"; };
+		010509E2194F262B00AFE2B7 /* CompletedAssignmentsFactory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CompletedAssignmentsFactory.m; sourceTree = "<group>"; };
 		0118F2641949B44600A9FA11 /* AddNoteDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddNoteDelegate.h; sourceTree = "<group>"; };
 		0118F2651949B44600A9FA11 /* AddNoteView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddNoteView.h; sourceTree = "<group>"; };
 		0118F2661949B44600A9FA11 /* AddNoteView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddNoteView.m; sourceTree = "<group>"; };
@@ -80,6 +90,14 @@
 		01194A8A194B2B9700B1870E /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 		01194A8C194B2BA100B1870E /* MultipeerConnectivity.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MultipeerConnectivity.framework; path = System/Library/Frameworks/MultipeerConnectivity.framework; sourceTree = SDKROOT; };
 		01194A8E194B2BAB00B1870E /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		01630E64194EDC3700AC0194 /* LookView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LookView.h; sourceTree = "<group>"; };
+		01630E65194EDC3700AC0194 /* LookView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LookView.m; sourceTree = "<group>"; };
+		01630E66194EDC3700AC0194 /* LookViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LookViewController.h; sourceTree = "<group>"; };
+		01630E67194EDC3700AC0194 /* LookViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LookViewController.m; sourceTree = "<group>"; };
+		01630E68194EDC3700AC0194 /* RecordView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RecordView.h; sourceTree = "<group>"; };
+		01630E69194EDC3700AC0194 /* RecordView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RecordView.m; sourceTree = "<group>"; };
+		01630E6A194EDC3700AC0194 /* RecordViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RecordViewController.h; sourceTree = "<group>"; };
+		01630E6B194EDC3700AC0194 /* RecordViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RecordViewController.m; sourceTree = "<group>"; };
 		01795420193DD4DC00DFFB4E /* LoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginViewController.h; sourceTree = "<group>"; };
 		01795421193DD4DC00DFFB4E /* LoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginViewController.m; sourceTree = "<group>"; };
 		01795423193DD4F000DFFB4E /* LoginView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginView.h; sourceTree = "<group>"; };
@@ -160,6 +178,17 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		010509DE194F25F200AFE2B7 /* Map */ = {
+			isa = PBXGroup;
+			children = (
+				010509E1194F262B00AFE2B7 /* CompletedAssignmentsFactory.h */,
+				010509E2194F262B00AFE2B7 /* CompletedAssignmentsFactory.m */,
+				010509DF194F262B00AFE2B7 /* CompletedAssignment.h */,
+				010509E0194F262B00AFE2B7 /* CompletedAssignment.m */,
+			);
+			name = Map;
+			sourceTree = "<group>";
+		};
 		0118F27B1949B45A00A9FA11 /* UpdateNote */ = {
 			isa = PBXGroup;
 			children = (
@@ -197,6 +226,21 @@
 				0118F27B1949B45A00A9FA11 /* UpdateNote */,
 			);
 			name = Notes;
+			sourceTree = "<group>";
+		};
+		011A56FB194ED8EB0035DB0C /* Multipeer */ = {
+			isa = PBXGroup;
+			children = (
+				01630E66194EDC3700AC0194 /* LookViewController.h */,
+				01630E67194EDC3700AC0194 /* LookViewController.m */,
+				01630E64194EDC3700AC0194 /* LookView.h */,
+				01630E65194EDC3700AC0194 /* LookView.m */,
+				01630E6A194EDC3700AC0194 /* RecordViewController.h */,
+				01630E6B194EDC3700AC0194 /* RecordViewController.m */,
+				01630E68194EDC3700AC0194 /* RecordView.h */,
+				01630E69194EDC3700AC0194 /* RecordView.m */,
+			);
+			name = Multipeer;
 			sourceTree = "<group>";
 		};
 		01876B6A193603650037D9DC = {
@@ -248,10 +292,12 @@
 				01876BA61936038A0037D9DC /* MainView.m */,
 				019A66BF194E4D42004FC139 /* Assignments */,
 				019B0DCF19476CBD00E3C450 /* AssignmentTools */,
+				011A56FB194ED8EB0035DB0C /* Multipeer */,
 				0118F27D1949B49300A9FA11 /* Notes */,
 				019A66B8194E4730004FC139 /* Recorder */,
 				01DCDEE41949E9EE004F47B9 /* Camera */,
 				01CE898A193F0D3B0040DE04 /* Login */,
+				010509DE194F25F200AFE2B7 /* Map */,
 			);
 			path = EnRoute;
 			sourceTree = "<group>";
@@ -483,7 +529,9 @@
 				0118F2791949B44600A9FA11 /* UpdateNoteView.m in Sources */,
 				01DCDEE31949E9E1004F47B9 /* CameraViewController.m in Sources */,
 				0118F2771949B44600A9FA11 /* Note.m in Sources */,
+				01630E6D194EDC3700AC0194 /* LookViewController.m in Sources */,
 				019B0DCE19476CAF00E3C450 /* AssignmentToolsView.m in Sources */,
+				010509E4194F262B00AFE2B7 /* CompletedAssignmentsFactory.m in Sources */,
 				018D7A471940AC7100099315 /* AssignmentView.m in Sources */,
 				01795425193DD4F000DFFB4E /* LoginView.m in Sources */,
 				019A66BE194E475C004FC139 /* RecorderViewController.m in Sources */,
@@ -492,13 +540,17 @@
 				0118F27A1949B44600A9FA11 /* UpdateNoteViewController.m in Sources */,
 				0118F2781949B44600A9FA11 /* NotesTableViewController.m in Sources */,
 				0118F2761949B44600A9FA11 /* ColorCell.m in Sources */,
+				01630E6E194EDC3700AC0194 /* RecordView.m in Sources */,
+				010509E3194F262B00AFE2B7 /* CompletedAssignment.m in Sources */,
 				019B0DCB19476C9A00E3C450 /* AssignmentToolsViewController.m in Sources */,
 				01876B83193603650037D9DC /* main.m in Sources */,
 				01876BA71936038A0037D9DC /* MainView.m in Sources */,
+				01630E6F194EDC3700AC0194 /* RecordViewController.m in Sources */,
 				019A66BD194E475C004FC139 /* RecorderView.m in Sources */,
 				018D7A411940895500099315 /* Assignment.m in Sources */,
 				01876BAA193603C00037D9DC /* MainViewController.m in Sources */,
 				01795422193DD4DC00DFFB4E /* LoginViewController.m in Sources */,
+				01630E6C194EDC3700AC0194 /* LookView.m in Sources */,
 				01DCDEE21949E9E1004F47B9 /* CameraView.m in Sources */,
 				0118F2741949B44600A9FA11 /* AddNoteView.m in Sources */,
 				018D7A441940897300099315 /* AssignmentFactory.m in Sources */,

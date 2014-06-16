@@ -11,21 +11,24 @@
 #import <RMMapView.h>
 #import <RMMapboxSource.h>
 #import <RMPointAnnotation.h>
+#import <AFNetworking/AFNetworking.h>
 #import "Assignment.h"
+#import "CompletedAssignmentsFactory.h"
+#import "CompletedAssignment.h"
 
-@interface AssignmentView : UIView
+@interface AssignmentView : UIView <RMMapViewDelegate>
 
 @property (strong, nonatomic) Assignment *assignment;
-
 @property (strong, nonatomic) UILabel *lblExplanation;
-
 @property (strong, nonatomic) UIButton *btnPrevious;
 @property (strong, nonatomic) UIButton *btnNext;
-
 @property (strong, nonatomic) RMMapView *mapView;
-
 @property (strong, nonatomic) UIMotionEffectGroup *motion;
+@property (nonatomic,strong) NSDictionary *completedAssignments;
+@property (nonatomic,strong) NSMutableArray *locations;
 
 - (id)initWithFrame:(CGRect)frame andAssignment:(Assignment *)assignment;
+
+-(void)updateWithLocations:(NSArray *)locations;
 
 @end

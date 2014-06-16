@@ -27,8 +27,8 @@
 		01B72054194AFD8E00898A20 /* Ik_zieTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 01B72053194AFD8E00898A20 /* Ik_zieTests.m */; };
 		01B72065194AFD9D00898A20 /* LookViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 01B7205E194AFD9D00898A20 /* LookViewController.m */; };
 		01B72066194AFD9D00898A20 /* LookView.m in Sources */ = {isa = PBXBuildFile; fileRef = 01B72060194AFD9D00898A20 /* LookView.m */; };
-		01B72067194AFD9D00898A20 /* RecorderViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 01B72062194AFD9D00898A20 /* RecorderViewController.m */; };
-		01B72068194AFD9D00898A20 /* RecorderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 01B72064194AFD9D00898A20 /* RecorderView.m */; };
+		01B72067194AFD9D00898A20 /* RecordViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 01B72062194AFD9D00898A20 /* RecordViewController.m */; };
+		01B72068194AFD9D00898A20 /* RecordView.m in Sources */ = {isa = PBXBuildFile; fileRef = 01B72064194AFD9D00898A20 /* RecordView.m */; };
 		7CCF425F003C422F90CE1754 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 07D1A2D76FFD4BF4A63C2EE7 /* libPods.a */; };
 /* End PBXBuildFile section */
 
@@ -69,10 +69,10 @@
 		01B7205E194AFD9D00898A20 /* LookViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LookViewController.m; sourceTree = "<group>"; };
 		01B7205F194AFD9D00898A20 /* LookView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LookView.h; sourceTree = "<group>"; };
 		01B72060194AFD9D00898A20 /* LookView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LookView.m; sourceTree = "<group>"; };
-		01B72061194AFD9D00898A20 /* RecorderViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RecorderViewController.h; sourceTree = "<group>"; };
-		01B72062194AFD9D00898A20 /* RecorderViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RecorderViewController.m; sourceTree = "<group>"; };
-		01B72063194AFD9D00898A20 /* RecorderView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RecorderView.h; sourceTree = "<group>"; };
-		01B72064194AFD9D00898A20 /* RecorderView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RecorderView.m; sourceTree = "<group>"; };
+		01B72061194AFD9D00898A20 /* RecordViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RecordViewController.h; sourceTree = "<group>"; };
+		01B72062194AFD9D00898A20 /* RecordViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RecordViewController.m; sourceTree = "<group>"; };
+		01B72063194AFD9D00898A20 /* RecordView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RecordView.h; sourceTree = "<group>"; };
+		01B72064194AFD9D00898A20 /* RecordView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RecordView.m; sourceTree = "<group>"; };
 		07D1A2D76FFD4BF4A63C2EE7 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		8CAF0FC61F44427E919586D3 /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -149,10 +149,10 @@
 				01B7205E194AFD9D00898A20 /* LookViewController.m */,
 				01B7205F194AFD9D00898A20 /* LookView.h */,
 				01B72060194AFD9D00898A20 /* LookView.m */,
-				01B72061194AFD9D00898A20 /* RecorderViewController.h */,
-				01B72062194AFD9D00898A20 /* RecorderViewController.m */,
-				01B72063194AFD9D00898A20 /* RecorderView.h */,
-				01B72064194AFD9D00898A20 /* RecorderView.m */,
+				01B72061194AFD9D00898A20 /* RecordViewController.h */,
+				01B72062194AFD9D00898A20 /* RecordViewController.m */,
+				01B72063194AFD9D00898A20 /* RecordView.h */,
+				01B72064194AFD9D00898A20 /* RecordView.m */,
 				01B72040194AFD8E00898A20 /* Images.xcassets */,
 				01B72035194AFD8E00898A20 /* Supporting Files */,
 			);
@@ -324,9 +324,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				01B72067194AFD9D00898A20 /* RecorderViewController.m in Sources */,
+				01B72067194AFD9D00898A20 /* RecordViewController.m in Sources */,
 				01B72065194AFD9D00898A20 /* LookViewController.m in Sources */,
-				01B72068194AFD9D00898A20 /* RecorderView.m in Sources */,
+				01B72068194AFD9D00898A20 /* RecordView.m in Sources */,
 				01B72066194AFD9D00898A20 /* LookView.m in Sources */,
 				01B7203F194AFD8E00898A20 /* AppDelegate.m in Sources */,
 				01B7203B194AFD8E00898A20 /* main.m in Sources */,

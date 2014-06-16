@@ -54,7 +54,6 @@
     self.audioSession = [AVAudioSession sharedInstance];
     
     [self.view.record addTarget:self action:@selector(record:) forControlEvents:UIControlEventTouchUpInside];
-    [self.view.send addTarget:self action:@selector(upload:) forControlEvents:UIControlEventTouchUpInside];
     [self.view.play addTarget:self action:@selector(playAudio:) forControlEvents:UIControlEventTouchUpInside];
     
     self.locationManager = [[CLLocationManager alloc] init];
@@ -84,7 +83,8 @@
     [self uploadFile:self.recordedAudioURL];
 }
 
--(void)uploadFile:(NSURL *)fileurl {
+-(void)uploadFile:(NSURL *)fileurl
+{
     NSString *onlineURL = @"http://student.howest.be/niels.boey/20132014/MAIV/ENROUTE/api/files";
     
     AFHTTPRequestOperationManager *manager = [AFHTTPRequestOperationManager manager];
@@ -224,7 +224,6 @@
         
         [self.view.record setImage:[UIImage imageNamed:@"recordbutton"] forState:UIControlStateNormal];
         
-        self.view.send.hidden = NO;
         self.view.play.hidden = NO;
         self.view.playlabel.hidden = NO;
         

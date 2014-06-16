@@ -64,6 +64,7 @@
 
 - (void)backTapped:(id)sender
 {
+    [[NSNotificationCenter defaultCenter] postNotificationName:@"reloadMap" object:self];
     [self dismissViewControllerAnimated:YES completion:^{}];
 }
 
@@ -72,10 +73,20 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     
+    [self.view.btnMultipeer addTarget:self action:@selector(multipeerTapped:) forControlEvents:UIControlEventTouchUpInside];
+    
     [self.view.btnNotes addTarget:self action:@selector(notesTapped:) forControlEvents:UIControlEventTouchUpInside];
     [self.view.btnFlash addTarget:self action:@selector(flashTapped:) forControlEvents:UIControlEventTouchUpInside];
     [self.view.btnMicrophone addTarget:self action:@selector(microphoneTapped:) forControlEvents:UIControlEventTouchUpInside];
     [self.view.btnCamera addTarget:self action:@selector(cameraTapped:) forControlEvents:UIControlEventTouchUpInside];
+}
+
+- (void)multipeerTapped:(id)sender
+{
+    LookViewController *lookVC = [[LookViewController alloc] initWithAssignment:self.assignment];
+    UINavigationController *navController =  [[UINavigationController alloc] initWithRootViewController:lookVC];
+    navController.navigationBar.titleTextAttributes = [NSDictionary dictionaryWithObjectsAndKeys:[UIColor colorWithRed:0.51 green:0.51 blue:0.51 alpha:1],NSForegroundColorAttributeName,[UIFont fontWithName:@"Hallosans-black" size:20.0],NSFontAttributeName,nil];
+    [self presentViewController:navController animated:YES completion:^{}];
 }
 
 - (void)notesTapped:(id)sender
@@ -129,8 +140,8 @@
 {
     float light = [UIScreen mainScreen].brightness;
 
-    if (light < 0.25) {
-        light = 0.25;
+    if (light < 0.35) {
+        light = 0.35;
     }
     
     NSLog(@"Brightness did change to %f", light*100);

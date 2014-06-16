@@ -53,7 +53,7 @@
         self.locations = [NSMutableArray array];
         
         for(NSDictionary *dict in self.assignments){
-            Assignment *assignment = [AssignmentsFactory createAssignmentWithDictionary:dict];
+            CompletedAssignment *assignment = [CompletedAssignmentsFactory createCompletedAssignmentWithDictionary:dict];
             [self.locations addObject:assignment];
         }
     

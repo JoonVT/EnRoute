@@ -14,7 +14,6 @@
 @property (nonatomic,strong) UIButton *upload;
 
 
-@property (nonatomic,strong) UIButton *send;
 @property (nonatomic,strong) UIButton *record;
 @property (nonatomic,strong) UILabel *label;
 @property (nonatomic,strong) UILabel *timer;

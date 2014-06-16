@@ -11,8 +11,8 @@
 #import <CoreLocation/CoreLocation.h>
 #import <AFNetworking/AFNetworking.h>
 #import "LocationView.h"
-#import "Assignment.h"
-#import "AssignmentsFactory.h"
+#import "CompletedAssignment.h"
+#import "CompletedAssignmentsFactory.h"
 
 @interface LocationViewController : UIViewController
 

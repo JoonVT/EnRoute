@@ -10,7 +10,7 @@
 #import <CoreLocation/CoreLocation.h>
 #import <MapKit/MapKit.h>
 
-@interface Assignment : NSObject <MKAnnotation>
+@interface CompletedAssignment : NSObject <MKAnnotation>
 
 @property (nonatomic) int identifier;
 @property (nonatomic,strong) NSNumber *mediaid;

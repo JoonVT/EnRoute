@@ -30,8 +30,6 @@
         self.label.textColor = [UIColor colorWithRed:0.4 green:0.4 blue:0.4 alpha:1];
         [self addSubview:self.label];
         
-         
-        
         self.playicon = [UIImage imageNamed:@"playbutton"];
         self.play = [UIButton buttonWithType:UIButtonTypeCustom];
         [self.play setImage:self.playicon forState:UIControlStateNormal];

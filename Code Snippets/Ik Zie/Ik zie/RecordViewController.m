@@ -6,13 +6,13 @@
 //  Copyright (c) 2014 devine. All rights reserved.
 //
 
-#import "RecorderViewController.h"
+#import "RecordViewController.h"
 
-@interface RecorderViewController ()
+@interface RecordViewController ()
 
 @end
 
-@implementation RecorderViewController
+@implementation RecordViewController
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -25,7 +25,7 @@
 - (void)loadView {
     
     CGRect sizeofScreen = [[UIScreen mainScreen] bounds];
-    self.view = [[RecorderView alloc] initWithFrame:sizeofScreen];
+    self.view = [[RecordView alloc] initWithFrame:sizeofScreen];
     
 }
 

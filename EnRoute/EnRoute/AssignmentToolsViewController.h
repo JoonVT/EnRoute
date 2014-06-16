@@ -10,6 +10,7 @@
 #import <AVFoundation/AVFoundation.h>
 #import "AssignmentToolsView.h"
 #import "Assignment.h"
+#import "LookViewController.h"
 #import "NotesTableViewController.h"
 #import "RecorderViewController.h"
 #import "CameraViewController.h"

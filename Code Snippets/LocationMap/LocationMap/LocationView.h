@@ -11,7 +11,7 @@
 #import <RMMapView.h>
 #import <RMMapboxSource.h>
 #import <RMPointAnnotation.h>
-#import "Assignment.h"
+#import "CompletedAssignment.h"
 
 @interface LocationView : UIView <RMMapViewDelegate>
 

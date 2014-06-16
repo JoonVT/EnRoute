@@ -7,10 +7,10 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "Assignment.h"
+#import "CompletedAssignment.h"
 
-@interface AssignmentsFactory : NSObject
+@interface CompletedAssignmentsFactory : NSObject
 
-+(Assignment *)createAssignmentWithDictionary:(NSDictionary *)dictionary;
++(CompletedAssignment *)createCompletedAssignmentWithDictionary:(NSDictionary *)dictionary;
 
 @end
