@@ -11,6 +11,8 @@
 		010509E4194F262B00AFE2B7 /* CompletedAssignmentsFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = 010509E2194F262B00AFE2B7 /* CompletedAssignmentsFactory.m */; };
 		010509EA194F520E00AFE2B7 /* ConnectionView.m in Sources */ = {isa = PBXBuildFile; fileRef = 010509E7194F520E00AFE2B7 /* ConnectionView.m */; };
 		010509EB194F520E00AFE2B7 /* ConnectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 010509E9194F520E00AFE2B7 /* ConnectionViewController.m */; };
+		010509EF194F910E00AFE2B7 /* BokehViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 010509EE194F910E00AFE2B7 /* BokehViewController.m */; };
+		010509F2194F912A00AFE2B7 /* BokehView.m in Sources */ = {isa = PBXBuildFile; fileRef = 010509F1194F912A00AFE2B7 /* BokehView.m */; };
 		0118F2741949B44600A9FA11 /* AddNoteView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0118F2661949B44600A9FA11 /* AddNoteView.m */; };
 		0118F2751949B44600A9FA11 /* AddNoteViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0118F2681949B44600A9FA11 /* AddNoteViewController.m */; };
 		0118F2761949B44600A9FA11 /* ColorCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 0118F26A1949B44600A9FA11 /* ColorCell.m */; };
@@ -77,6 +79,10 @@
 		010509E7194F520E00AFE2B7 /* ConnectionView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ConnectionView.m; sourceTree = "<group>"; };
 		010509E8194F520E00AFE2B7 /* ConnectionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ConnectionViewController.h; sourceTree = "<group>"; };
 		010509E9194F520E00AFE2B7 /* ConnectionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ConnectionViewController.m; sourceTree = "<group>"; };
+		010509ED194F910E00AFE2B7 /* BokehViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BokehViewController.h; sourceTree = "<group>"; };
+		010509EE194F910E00AFE2B7 /* BokehViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BokehViewController.m; sourceTree = "<group>"; };
+		010509F0194F912A00AFE2B7 /* BokehView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BokehView.h; sourceTree = "<group>"; };
+		010509F1194F912A00AFE2B7 /* BokehView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BokehView.m; sourceTree = "<group>"; };
 		0118F2641949B44600A9FA11 /* AddNoteDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddNoteDelegate.h; sourceTree = "<group>"; };
 		0118F2651949B44600A9FA11 /* AddNoteView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddNoteView.h; sourceTree = "<group>"; };
 		0118F2661949B44600A9FA11 /* AddNoteView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddNoteView.m; sourceTree = "<group>"; };
@@ -206,6 +212,17 @@
 			name = ShadowMovie;
 			sourceTree = "<group>";
 		};
+		010509EC194F90B400AFE2B7 /* Bokeh */ = {
+			isa = PBXGroup;
+			children = (
+				010509ED194F910E00AFE2B7 /* BokehViewController.h */,
+				010509EE194F910E00AFE2B7 /* BokehViewController.m */,
+				010509F0194F912A00AFE2B7 /* BokehView.h */,
+				010509F1194F912A00AFE2B7 /* BokehView.m */,
+			);
+			name = Bokeh;
+			sourceTree = "<group>";
+		};
 		0118F27B1949B45A00A9FA11 /* UpdateNote */ = {
 			isa = PBXGroup;
 			children = (
@@ -309,6 +326,7 @@
 				01876BA61936038A0037D9DC /* MainView.m */,
 				019A66BF194E4D42004FC139 /* Assignments */,
 				019B0DCF19476CBD00E3C450 /* AssignmentTools */,
+				010509EC194F90B400AFE2B7 /* Bokeh */,
 				010509E5194F517100AFE2B7 /* ShadowMovie */,
 				011A56FB194ED8EB0035DB0C /* Multipeer */,
 				0118F27D1949B49300A9FA11 /* Notes */,
@@ -545,6 +563,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				0118F2791949B44600A9FA11 /* UpdateNoteView.m in Sources */,
+				010509EF194F910E00AFE2B7 /* BokehViewController.m in Sources */,
 				01DCDEE31949E9E1004F47B9 /* CameraViewController.m in Sources */,
 				010509EB194F520E00AFE2B7 /* ConnectionViewController.m in Sources */,
 				0118F2771949B44600A9FA11 /* Note.m in Sources */,
@@ -553,6 +572,7 @@
 				010509E4194F262B00AFE2B7 /* CompletedAssignmentsFactory.m in Sources */,
 				018D7A471940AC7100099315 /* AssignmentView.m in Sources */,
 				01795425193DD4F000DFFB4E /* LoginView.m in Sources */,
+				010509F2194F912A00AFE2B7 /* BokehView.m in Sources */,
 				019A66BE194E475C004FC139 /* RecorderViewController.m in Sources */,
 				0118F2751949B44600A9FA11 /* AddNoteViewController.m in Sources */,
 				01876B87193603650037D9DC /* AppDelegate.m in Sources */,

@@ -67,6 +67,18 @@
             
             [self addSubview:self.btnMultipeer];
         }
+        else if (assignment.identifier == 5)
+        {
+            NSAttributedString *txtStart = [[NSAttributedString alloc] initWithString:@"START" attributes:@{NSFontAttributeName : [UIFont fontWithName:@"Hallosans-Black" size:22], NSForegroundColorAttributeName : [UIColor colorWithRed:0.76 green:0.62 blue:0.18 alpha:1], NSKernAttributeName : @(1.0f)}];
+            
+            self.btnBokeh = [UIButton buttonWithType:UIButtonTypeSystem];
+            self.btnBokeh.frame = CGRectMake(100, 410, frame.size.width - 200, 45);
+            [self.btnBokeh setBackgroundImage:[UIImage imageNamed:@"button"] forState:UIControlStateNormal];
+            [self.btnBokeh setBackgroundImage:[UIImage imageNamed:@"button_pressed"] forState:UIControlStateHighlighted];
+            [self.btnBokeh setAttributedTitle:txtStart forState:UIControlStateNormal];
+            
+            [self addSubview:self.btnBokeh];
+        }
         
         self.btnNotes = [UIButton buttonWithType:UIButtonTypeCustom];
         self.btnNotes.frame = CGRectMake(0, frame.size.height - 81, 80, 81);

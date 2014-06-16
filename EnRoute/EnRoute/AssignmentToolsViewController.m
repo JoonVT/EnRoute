@@ -75,6 +75,7 @@
     
     [self.view.btnShadowMovie addTarget:self action:@selector(shadowMovieTapped:) forControlEvents:UIControlEventTouchUpInside];
     [self.view.btnMultipeer addTarget:self action:@selector(multipeerTapped:) forControlEvents:UIControlEventTouchUpInside];
+    [self.view.btnBokeh addTarget:self action:@selector(bokehTapped:) forControlEvents:UIControlEventTouchUpInside];
     
     [self.view.btnNotes addTarget:self action:@selector(notesTapped:) forControlEvents:UIControlEventTouchUpInside];
     [self.view.btnFlash addTarget:self action:@selector(flashTapped:) forControlEvents:UIControlEventTouchUpInside];
@@ -94,6 +95,14 @@
 {
     LookViewController *lookVC = [[LookViewController alloc] initWithAssignment:self.assignment];
     UINavigationController *navController =  [[UINavigationController alloc] initWithRootViewController:lookVC];
+    navController.navigationBar.titleTextAttributes = [NSDictionary dictionaryWithObjectsAndKeys:[UIColor colorWithRed:0.51 green:0.51 blue:0.51 alpha:1],NSForegroundColorAttributeName,[UIFont fontWithName:@"Hallosans-black" size:20.0],NSFontAttributeName,nil];
+    [self presentViewController:navController animated:YES completion:^{}];
+}
+
+- (void)bokehTapped:(id)sender
+{
+    BokehViewController *bokehVC = [[BokehViewController alloc] initWithAssignment:self.assignment];
+    UINavigationController *navController =  [[UINavigationController alloc] initWithRootViewController:bokehVC];
     navController.navigationBar.titleTextAttributes = [NSDictionary dictionaryWithObjectsAndKeys:[UIColor colorWithRed:0.51 green:0.51 blue:0.51 alpha:1],NSForegroundColorAttributeName,[UIFont fontWithName:@"Hallosans-black" size:20.0],NSFontAttributeName,nil];
     [self presentViewController:navController animated:YES completion:^{}];
 }

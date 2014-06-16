@@ -45,8 +45,8 @@
         "assignment": {
             "id": "2",
             "name": "Lichttextuur",
-            "explanation1": "Ga op zoek naar interresante texturen waar je veel licht of donker in ziet.",
-            "explanation2": "Fotografeer deze texturen en let op interresante lichtinvallen.",
+            "explanation1": "Ga op zoek naar interessante texturen waar je veel licht of donker in ziet.",
+            "explanation2": "Fotografeer deze texturen en let op interessante lichtinvallen.",
             "explanation3": "Toon jouw texturen aan de anderen en vergelijk.",
             "color_top": {
                 "red": "0.40",
@@ -90,7 +90,7 @@
             "id": "4",
             "name": "De Gentenaar",
             "explanation1": "Wie zijn de echte inwoners van de stad? ondervraag ze, fotografeer ze, film ze …",
-            "explanation2": "Als je interresante personen gevonden hebt kan je je bevindingen noteren in je notities.",
+            "explanation2": "Als je interessante personen gevonden hebt kan je je bevindingen noteren in je notities.",
             "explanation3": "Of maak foto's en filmpjes … Of interview ze met je recorder",
             "color_top": {
                 "red": "0.90",
@@ -110,10 +110,10 @@
     {
         "assignment": {
             "id": "5",
-            "name": "untitled",
-            "explanation1": "not defined",
-            "explanation2": "not defined",
-            "explanation3": "not defined",
+            "name": "Bokeh",
+            "explanation1": "Kijk rond je heen naar interessante uitzichten en straatbeelden, hoe zouden die er 's avonds er uitzien?",
+            "explanation2": "Neem een foto van dat straatbeeld.",
+            "explanation3": "Beweeg je iPhone tot je een tof nachtbeeld hebt, sla het op en toon je nachtbeeld aan je vrienden.",
             "color_top": {
                 "red": "0.67",
                 "green": "0.45",

@@ -17,6 +17,7 @@
 
 @property (strong, nonatomic) UIButton *btnShadowMovie;
 @property (strong, nonatomic) UIButton *btnMultipeer;
+@property (strong, nonatomic) UIButton *btnBokeh;
 
 @property (strong, nonatomic) UIButton *btnNotes;
 @property (strong, nonatomic) UIButton *btnFlash;

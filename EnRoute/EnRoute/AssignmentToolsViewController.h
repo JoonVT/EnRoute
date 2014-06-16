@@ -12,6 +12,7 @@
 #import "Assignment.h"
 #import "ConnectionViewController.h"
 #import "LookViewController.h"
+#import "BokehViewController.h"
 #import "NotesTableViewController.h"
 #import "RecorderViewController.h"
 #import "CameraViewController.h"
