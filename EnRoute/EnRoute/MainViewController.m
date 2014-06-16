@@ -118,6 +118,11 @@
         self.view.pageControl.currentPage = page;
     }
     
+    if (page == 1 && [[NSUserDefaults standardUserDefaults] boolForKey:@"didShowPopup"] == NO)
+    {
+        [[NSNotificationCenter defaultCenter] postNotificationName:@"showPopup" object:self];
+    }
+    
     Assignment *currentAssignment = [self.assignments objectAtIndex:page];
     
     self.title = currentAssignment.name;

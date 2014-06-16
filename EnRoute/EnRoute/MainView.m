@@ -60,6 +60,8 @@
         self.pageControl = [[UIPageControl alloc] initWithFrame:CGRectZero];
         self.pageControl.numberOfPages = assignments.count;
         self.pageControl.hidden = YES;
+        self.pageControl.pageIndicatorTintColor = [UIColor colorWithRed:0.62 green:0.62 blue:0.62 alpha:.75];
+        self.pageControl.currentPageIndicatorTintColor = [UIColor colorWithRed:0.16 green:0.16 blue:0.16 alpha:.75];
         
         CGSize sizeOfPageControl = [self.pageControl sizeForNumberOfPages:self.pageControl.numberOfPages];
         

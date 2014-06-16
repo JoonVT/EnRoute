@@ -23,6 +23,26 @@
         
         self.title = @"Connecteer";
         
+        CGFloat topRed = [[assignment.topColor objectForKey:@"red"] floatValue];
+        CGFloat topGreen = [[assignment.topColor objectForKey:@"green"] floatValue];
+        CGFloat topBlue = [[assignment.topColor objectForKey:@"blue"] floatValue];
+        CGFloat topAlpha = [[assignment.topColor objectForKey:@"alpha"] floatValue];
+        
+        CGFloat bottomRed = [[assignment.bottomColor objectForKey:@"red"] floatValue];
+        CGFloat bottomGreen = [[assignment.bottomColor objectForKey:@"green"] floatValue];
+        CGFloat bottomBlue = [[assignment.bottomColor objectForKey:@"blue"] floatValue];
+        CGFloat bottomAlpha = [[assignment.bottomColor objectForKey:@"alpha"] floatValue];
+        
+        UIColor *topColor = [UIColor colorWithRed:topRed green:topGreen blue:topBlue alpha:topAlpha];
+        UIColor *bottomColor = [UIColor colorWithRed:bottomRed green:bottomGreen blue:bottomBlue alpha:bottomAlpha];
+        
+        CGRect bounds = [[UIScreen mainScreen] bounds];
+        
+        CAGradientLayer *gradient = [CAGradientLayer layer];
+        gradient.frame = bounds;
+        gradient.colors = [NSArray arrayWithObjects:(id)[topColor CGColor], (id)[bottomColor CGColor], nil];
+        [self.view.layer insertSublayer:gradient atIndex:0];
+        
         UIView *btnDoneView = [[UIView alloc]initWithFrame:CGRectMake(0, 0, 50, 30)];
         
         UIButton *btnDone = [UIButton buttonWithType:UIButtonTypeSystem];

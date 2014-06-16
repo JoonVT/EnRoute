@@ -15,6 +15,7 @@
 @property (strong, nonatomic) UILabel *lblExplanation2;
 @property (strong, nonatomic) UILabel *lblExplanation3;
 
+@property (strong, nonatomic) UIButton *btnShadowMovie;
 @property (strong, nonatomic) UIButton *btnMultipeer;
 
 @property (strong, nonatomic) UIButton *btnNotes;

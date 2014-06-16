@@ -40,6 +40,8 @@
 
 - (void)backTapped:(id)sender
 {
+    [[NSNotificationCenter defaultCenter] postNotificationName:@"closed" object:self];
+    
     [self dismissViewControllerAnimated:YES completion:^{}];
 }
 
@@ -104,7 +106,8 @@
     self.mediaType = 1;
 }
 
--(void)imagePickerControllerDidCancel:(UIImagePickerController *)picker {
+-(void)imagePickerControllerDidCancel:(UIImagePickerController *)picker
+{
     if(self.moviePlayer.view){
         [self.moviePlayer play];
     }

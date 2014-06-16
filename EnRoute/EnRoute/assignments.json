@@ -88,10 +88,10 @@
     {
         "assignment": {
             "id": "4",
-            "name": "untitled",
-            "explanation1": "not defined",
-            "explanation2": "not defined",
-            "explanation3": "not defined",
+            "name": "De Gentenaar",
+            "explanation1": "Wie zijn de echte inwoners van de stad? ondervraag ze, fotografeer ze, film ze …",
+            "explanation2": "Als je interresante personen gevonden hebt kan je je bevindingen noteren in je notities.",
+            "explanation3": "Of maak foto's en filmpjes … Of interview ze met je recorder",
             "color_top": {
                 "red": "0.90",
                 "green": "0.42",

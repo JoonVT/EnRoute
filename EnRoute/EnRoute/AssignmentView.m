@@ -22,13 +22,21 @@
         {
             self.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"explanation"]];
             
-            NSAttributedString *txtLogout = [[NSAttributedString alloc] initWithString:@"KIES EEN ANDERE GROEP" attributes:@{NSFontAttributeName : [UIFont fontWithName:@"Hallosans-Black" size:22], NSForegroundColorAttributeName : [UIColor colorWithRed:0.51 green:0.51 blue:0.51 alpha:1], NSKernAttributeName : @(1.0f)}];
+            NSDictionary *group = [[NSUserDefaults standardUserDefaults] objectForKey:@"group"];
+            
+            NSAttributedString *txtTitle = [[NSAttributedString alloc] initWithString:[group objectForKey:@"groupname"] attributes:@{NSFontAttributeName : [UIFont fontWithName:@"Hallosans-Black" size:25], NSForegroundColorAttributeName : [UIColor colorWithRed:0.58 green:0.86 blue:0.8 alpha:1], NSKernAttributeName : @(1.0f)}];
             
             NSAttributedString *txtExplanation = [[NSAttributedString alloc] initWithString:assignment.explanation1 attributes:@{NSFontAttributeName : [UIFont fontWithName:@"Hallosans" size:20], NSForegroundColorAttributeName : [UIColor colorWithRed:0.51 green:0.51 blue:0.51 alpha:1], NSKernAttributeName : @(0.5f)}];
             
-            self.lblExplanation = [[UILabel alloc] initWithFrame:CGRectMake(15, 70, frame.size.width-30, 100)];
-            self.lblExplanation.attributedText = txtExplanation;
-            self.lblExplanation.numberOfLines = 0;
+            NSAttributedString *txtLogout = [[NSAttributedString alloc] initWithString:@"KIES EEN ANDERE GROEP" attributes:@{NSFontAttributeName : [UIFont fontWithName:@"Hallosans-Black" size:22], NSForegroundColorAttributeName : [UIColor colorWithRed:0.51 green:0.51 blue:0.51 alpha:1], NSKernAttributeName : @(1.0f)}];
+            
+            UILabel *lblTitle = [[UILabel alloc] initWithFrame:CGRectMake(15, 85, self.frame.size.width - 30, 25)];
+            lblTitle.attributedText = txtTitle;
+            lblTitle.textAlignment = NSTextAlignmentCenter;
+            
+            UILabel *lblExplanation = [[UILabel alloc] initWithFrame:CGRectMake(15, 115, frame.size.width-30, 100)];
+            lblExplanation.attributedText = txtExplanation;
+            lblExplanation.numberOfLines = 0;
             
             self.btnNext = [UIButton buttonWithType:UIButtonTypeSystem];
             self.btnNext.frame = CGRectMake(frame.size.width - 50, (frame.size.height/2)-26, 30, 52);
@@ -40,7 +48,8 @@
             [logout setAttributedTitle:txtLogout forState:UIControlStateNormal];
             [logout addTarget:self action:@selector(logoutTapped:) forControlEvents:UIControlEventTouchUpInside];
             
-            [self addSubview:self.lblExplanation];
+            [self addSubview:lblTitle];
+            [self addSubview:lblExplanation];
             [self addSubview:self.btnNext];
             [self addSubview:logout];
         }
@@ -48,7 +57,7 @@
         {
             RMMapboxSource *source = [[RMMapboxSource alloc]initWithMapID:@"ewoudsurmont.ih39bpe9"];
             
-            self.mapView = [[RMMapView alloc]initWithFrame:CGRectMake(0, 0, frame.size.width, frame.size.height) andTilesource:source centerCoordinate:CLLocationCoordinate2DMake(51.053, 3.724) zoomLevel:15 maxZoomLevel:20 minZoomLevel:10 backgroundImage:nil];
+            self.mapView = [[RMMapView alloc]initWithFrame:CGRectMake(0, 0, frame.size.width, frame.size.height) andTilesource:source centerCoordinate:CLLocationCoordinate2DMake(51.047, 3.727) zoomLevel:17 maxZoomLevel:20 minZoomLevel:10 backgroundImage:nil];
             self.mapView.delegate = self;
             self.mapView.showsUserLocation = YES;
             self.mapView.tintColor = [UIColor colorWithRed:0.33 green:0.79 blue:0.63 alpha:1];
@@ -85,11 +94,17 @@
             UIImageView *lamp = [[UIImageView alloc] initWithImage:[UIImage imageNamed:[NSString stringWithFormat:@"lamp%i",assignment.panelID]]];
             lamp.center = CGPointMake(frame.size.width/2, frame.size.height/2);
             
+            self.popup = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"explanation_popup"]];
+            self.popup.center = CGPointMake(frame.size.width/2, frame.origin.y-90);
+            
             [self addSubview:background];
             [self addSubview:self.btnPrevious];
             [self addSubview:self.btnNext];
             [self addSubview:btnLight];
             [self addSubview:lamp];
+            [self addSubview:self.popup];
+            
+            [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(showPopup) name:@"showPopup" object:nil];
             
             [self createMotionEffect];
             
@@ -99,9 +114,27 @@
     return self;
 }
 
+- (void)showPopup
+{
+    NSLog(@"BINNEEEEEENNN");
+    
+    [UIView animateWithDuration:.75 delay:0 usingSpringWithDamping:.5 initialSpringVelocity:.5 options:UIViewAnimationOptionCurveEaseOut animations:^{
+        self.popup.center = CGPointMake(self.frame.size.width/2, self.frame.origin.y+120);
+    } completion:^(BOOL finished)
+    {
+        [UIView animateWithDuration:.75 delay:10 usingSpringWithDamping:.5 initialSpringVelocity:.5 options:UIViewAnimationOptionCurveEaseOut animations:^{
+            self.popup.center = CGPointMake(self.frame.size.width/2, self.frame.origin.y-90);
+        } completion:^(BOOL finished)
+         {
+             [[NSUserDefaults standardUserDefaults] setBool:YES forKey:@"didShowPopup"];
+         }];
+    }];
+}
+
 - (void)logoutTapped:(id)sender
 {
     [[NSUserDefaults standardUserDefaults] setBool:NO forKey:@"isLoggedIn"];
+    [[NSUserDefaults standardUserDefaults] setBool:NO forKey:@"didShowPopup"];
     [[NSUserDefaults standardUserDefaults] setObject:@{} forKey:@"group"];
     
     [[NSUserDefaults standardUserDefaults] synchronize];
