@@ -16,7 +16,18 @@
     if (self) {
         // Initialization code
         
-        self.backImage = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"login"]];
+        NSArray *imageNames = @[@"loadscreen_00", @"loadscreen_01", @"loadscreen_02", @"loadscreen_01"];
+        
+        NSMutableArray *images = [[NSMutableArray alloc] init];
+        for (int i = 0; i < imageNames.count; i++) {
+            [images addObject:[UIImage imageNamed:[imageNames objectAtIndex:i]]];
+        }
+        
+        self.backImage = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, self.frame.size.width, self.frame.size.height)];
+        self.backImage.animationImages = images;
+        self.backImage.animationDuration = 1;
+        
+        [self.backImage startAnimating];
         
         NSAttributedString *txtTitle = [[NSAttributedString alloc] initWithString:@"GENT VERLICHT" attributes:@{NSFontAttributeName : [UIFont fontWithName:@"Hallosans-Black" size:30], NSForegroundColorAttributeName : [UIColor colorWithRed:0.58 green:0.86 blue:0.8 alpha:1], NSKernAttributeName : @(1.0f)}];
         

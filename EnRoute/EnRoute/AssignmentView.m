@@ -57,6 +57,8 @@
             self.btnPrevious.frame = CGRectMake(20, (frame.size.height/2)-26, 30, 52);
             [self.btnPrevious setBackgroundImage:[UIImage imageNamed:@"previous"] forState:UIControlStateNormal];
             
+            [self loadCompletedAssignments];
+            
             [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(loadCompletedAssignments) name:@"reloadMap" object:nil];
             
             [self addSubview:self.mapView];

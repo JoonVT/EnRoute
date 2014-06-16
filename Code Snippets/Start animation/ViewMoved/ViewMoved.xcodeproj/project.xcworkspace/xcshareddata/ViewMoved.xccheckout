@@ -5,19 +5,19 @@
 	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
 	<false/>
 	<key>IDESourceControlProjectIdentifier</key>
-	<string>2D0F3738-A8AA-495E-B27D-EFDFF9667EF9</string>
+	<string>CD0747EC-6741-419C-A2AB-23A6AE3DB420</string>
 	<key>IDESourceControlProjectName</key>
 	<string>ViewMoved</string>
 	<key>IDESourceControlProjectOriginsDictionary</key>
 	<dict>
-		<key>CC5E9968-20EB-46E5-A43E-AFB8D8484B22</key>
+		<key>07A74943-F4A2-4E10-97E8-D970843CC428</key>
 		<string>https://github.com/JoonVT/EnRoute.git</string>
 	</dict>
 	<key>IDESourceControlProjectPath</key>
 	<string>Code Snippets/Start animation/ViewMoved/ViewMoved.xcodeproj/project.xcworkspace</string>
 	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
 	<dict>
-		<key>CC5E9968-20EB-46E5-A43E-AFB8D8484B22</key>
+		<key>07A74943-F4A2-4E10-97E8-D970843CC428</key>
 		<string>../../../../..</string>
 	</dict>
 	<key>IDESourceControlProjectURL</key>
@@ -25,16 +25,16 @@
 	<key>IDESourceControlProjectVersion</key>
 	<integer>110</integer>
 	<key>IDESourceControlProjectWCCIdentifier</key>
-	<string>CC5E9968-20EB-46E5-A43E-AFB8D8484B22</string>
+	<string>07A74943-F4A2-4E10-97E8-D970843CC428</string>
 	<key>IDESourceControlProjectWCConfigurations</key>
 	<array>
 		<dict>
 			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
 			<string>public.vcs.git</string>
 			<key>IDESourceControlWCCIdentifierKey</key>
-			<string>CC5E9968-20EB-46E5-A43E-AFB8D8484B22</string>
+			<string>07A74943-F4A2-4E10-97E8-D970843CC428</string>
 			<key>IDESourceControlWCCName</key>
-			<string>EnRoute</string>
+			<string>02_ENROUTE</string>
 		</dict>
 	</array>
 </dict>
